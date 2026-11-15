@@ -21,7 +21,7 @@ npm test
 npm run build:static
 ```
 
-Deploy the contents of `out/` as Cloudflare Workers Static Assets. `scripts/export-site.ts` emits security headers with hashes for Next.js inline scripts. Serve unknown paths as genuine 404 responses, not an SPA fallback. Fingerprinted assets use immutable caching.
+Cloudflare Pages builds from `main` with `npm run lint && npm test && npm run build:static` and publishes `out/`. No deploy API token is stored in GitHub. `scripts/export-site.ts` emits security headers with hashes for Next.js inline scripts. Serve unknown paths as genuine 404 responses, not an SPA fallback. Fingerprinted assets use immutable caching.
 
 The canonical origin is https://vishvendrabhoomidi.com. Production enables indexing; ordinary local builds remain noindex. Social previews use the owner-supplied image. Optional public ownership verification tags are documented in `.env.example`.
 
