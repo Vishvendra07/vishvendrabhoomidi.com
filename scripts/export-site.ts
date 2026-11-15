@@ -18,6 +18,12 @@ const headers=[`/*
 
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
 `];
 for(const file of walk(root).filter(f=>f.endsWith('.html'))){
  const html=fs.readFileSync(file,'utf8');
