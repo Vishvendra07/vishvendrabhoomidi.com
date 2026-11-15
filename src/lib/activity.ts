@@ -1,11 +1,11 @@
 
-export const sourceIds = ["manual-import", "openai-api", "app-instrumentation", "github"] as const;
+export const sourceIds = ["manual-import", "codex", "openai-api", "app-instrumentation", "github"] as const;
 export type SourceId = typeof sourceIds[number];
 export type ActivityUnit = "tokens" | "contributions";
 export function validDate(value: string) {
   return /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 }
-export type DailyActivity = { date: string; count: number | null; providers: string[] };
+export type DailyActivity = { date: string; count: number | null; providers: string[]; partial?: boolean };
 export type ActivityMetadata = { source: SourceId; label: string; unit: ActivityUnit; timezone: string; verified: boolean; updatedAt: string | null; coverage: { start: string; end: string; complete: boolean } | null };
 export type ActivityDataset = { metadata: ActivityMetadata; days: DailyActivity[] };
 export type ActivitySummary = { total: number | null; activeDays: number; observedDays: number; currentStreak: number | null; longestStreak: number | null; peak: DailyActivity | null };
@@ -37,7 +37,7 @@ export function summarize(days: DailyActivity[]): ActivitySummary {
   const observed = days.filter(d => d.count !== null);
   if (!observed.length) return { total: null, activeDays: 0, observedDays: 0, currentStreak: null, longestStreak: null, peak: null };
   const ordered = [...days].sort((a,b) => a.date.localeCompare(b.date));
-  const contiguous = ordered.every((d,i) => d.count !== null && (!i || addDays(ordered[i-1].date, 1) === d.date));
+  const contiguous = ordered.every((d,i) => d.count !== null && !d.partial && (!i || addDays(ordered[i-1].date, 1) === d.date));
   let run = 0, longest = 0;
   for (const d of ordered) { run = d.count && d.count > 0 ? run + 1 : 0; longest = Math.max(longest, run); }
   return { total: observed.reduce((n,d) => safeSum(n, d.count!), 0), activeDays: observed.filter(d => d.count! > 0).length, observedDays: observed.length, currentStreak: contiguous ? run : null, longestStreak: contiguous ? longest : null, peak: observed.reduce((a,b) => a.count! >= b.count! ? a : b) };
@@ -48,7 +48,7 @@ export function aggregateWeeks(days: DailyActivity[]) {
     const weekday = new Date(`${d.date}T00:00:00Z`).getUTCDay();
     const date = addDays(d.date, -((weekday + 6) % 7));
     const old = groups.get(date) || { date, count: null, observed: 0, missing: 0 };
-    if (d.count !== null) { old.count = safeSum(old.count || 0, d.count); old.observed++; } else old.missing++;
+    if (d.count !== null) { old.count = safeSum(old.count || 0, d.count); old.observed++; if (d.partial) old.missing++; } else old.missing++;
     groups.set(date, old);
   }
   return [...groups.values()];

@@ -1,0 +1,2113 @@
+{
+  "metadata": {
+    "source": "codex",
+    "label": "Codex · two accounts",
+    "unit": "tokens",
+    "timezone": "UTC",
+    "verified": true,
+    "updatedAt": "2026-11-15T20:11:40.808Z",
+    "coverage": {
+      "start": "2026-02-15",
+      "end": "2026-11-14",
+      "complete": false
+    }
+  },
+  "days": [
+    {
+      "date": "2026-02-15",
+      "count": 96501350,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "count": 204006093,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "count": 110397603,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-18",
+      "count": 7390914,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-02-20",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-02-21",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-02-22",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-02-23",
+      "count": 18078100,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-24",
+      "count": 91054160,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-25",
+      "count": 68052920,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "count": 83899521,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-27",
+      "count": 162123058,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-02-28",
+      "count": 15255177,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-01",
+      "count": 12970225,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "count": 93613900,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-03",
+      "count": 135135966,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-04",
+      "count": 218903761,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-05",
+      "count": 129304510,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "count": 132256136,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-07",
+      "count": 193379292,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-08",
+      "count": 30511497,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "count": 95522811,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-10",
+      "count": 158518006,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-11",
+      "count": 123096726,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-12",
+      "count": 103736691,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-13",
+      "count": 68457277,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-14",
+      "count": 58121757,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-15",
+      "count": 4840639,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-16",
+      "count": 61513295,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "count": 4143549,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-18",
+      "count": 44715543,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "count": 99640031,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "count": 139730170,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-21",
+      "count": 99908154,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-22",
+      "count": 10499476,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-23",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-03-24",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-03-25",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-03-26",
+      "count": 252575805,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "count": 335181974,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-28",
+      "count": 107308645,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-29",
+      "count": 165182437,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-03-30",
+      "count": 200212262,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-04-01",
+      "count": 101770294,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "count": 88285773,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "count": 181714070,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "count": 97670768,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-05",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-04-06",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-04-07",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-04-08",
+      "count": 176844943,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "count": 112185589,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "count": 201391843,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-11",
+      "count": 140220043,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-12",
+      "count": 65092390,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "count": 365830826,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "count": 358741632,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-15",
+      "count": 331388736,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "count": 657513276,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "count": 630850941,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-18",
+      "count": 519806183,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-19",
+      "count": 241813555,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-20",
+      "count": 143218051,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "count": 664329900,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "count": 590765584,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "count": 673235703,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "count": 204009355,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "count": 52833643,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "count": 55643803,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "count": 42759355,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "count": 226114158,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "count": 272671972,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "count": 57734080,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-02",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-03",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-04",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-05",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-06",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-07",
+      "count": 35794576,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "count": 171424601,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "count": 49345069,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-11",
+      "count": 168663458,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-13",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-14",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-15",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-16",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-17",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-18",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-19",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-20",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-21",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-22",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-23",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-24",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-25",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-26",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-05-27",
+      "count": 148989288,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "count": 36240724,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "count": 27516400,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "count": 339669073,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-05-31",
+      "count": 16730967,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-02",
+      "count": 358061068,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "count": 88173246,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "count": 462757272,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "count": 94329601,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "count": 99438612,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "count": 29361357,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "count": 93310841,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "count": 134884954,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "count": 241460099,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "count": 23013378,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "count": 45279494,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-13",
+      "count": 13147628,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-14",
+      "count": 17036799,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "count": 149163115,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "count": 141067246,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "count": 61399629,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "count": 187674214,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "count": 293185637,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "count": 244360109,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "count": 325134921,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "count": 650836324,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "count": 169210572,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-25",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-26",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-27",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-28",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-29",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-06-30",
+      "count": 49949558,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "count": 61505248,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "count": 80307881,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "count": 140209071,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "count": 137271975,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "count": 206689465,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "count": 134543718,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "count": 333939044,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "count": 172270776,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "count": 282811186,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "count": 453395177,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "count": 494733648,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-07-13",
+      "count": 236183439,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "count": 855698269,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "count": 1484288829,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "count": 1063650133,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "count": 512528943,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-07-19",
+      "count": 226487871,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "count": 874952203,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "count": 816406032,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "count": 1678576175,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "count": 785946849,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-07-25",
+      "count": null,
+      "partial": false,
+      "providers": []
+    },
+    {
+      "date": "2026-07-26",
+      "count": 734973574,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "count": 668102641,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "count": 534165313,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "count": 605119917,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "count": 706882512,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "count": 493620403,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "count": 518551376,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "count": 376534245,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "count": 690284462,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "count": 908957435,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "count": 737884880,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "count": 590803122,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "count": 475806454,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "count": 741830126,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "count": 1144529787,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "count": 1065912048,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "count": 873565100,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "count": 853137264,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "count": 884266520,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "count": 610894147,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "count": 684623551,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "count": 379314162,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "count": 994758096,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "count": 1053713148,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "count": 203208718,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "count": 901667657,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "count": 902651502,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "count": 928376936,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "count": 1134283000,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "count": 1638457875,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "count": 1005456444,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "count": 770169082,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "count": 1276316888,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "count": 2082661032,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "count": 1622091088,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "count": 1760304445,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "count": 1665961491,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "count": 732652759,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "count": 1151898818,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "count": 1427518253,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "count": 1273330312,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "count": 1253737862,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "count": 1056076823,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "count": 1515812688,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "count": 1018324330,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "count": 782519143,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "count": 1196639734,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "count": 605118559,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "count": 1373789761,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "count": 1628996920,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "count": 659522067,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "count": 1316917382,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "count": 1693188854,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "count": 1442744922,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "count": 51164547,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "count": 154240919,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "count": 2443373075,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "count": 1832313018,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "count": 1679158402,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "count": 1605681042,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "count": 1607286117,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "count": 959917966,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "count": 386898452,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "count": 145839941,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "count": 614225599,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "count": 1408464363,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "count": 1564995969,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "count": 1538200193,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "count": 1243260612,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "count": 450767831,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "count": 490713479,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "count": 613274313,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "count": 2685000136,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "count": 2303230886,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "count": 2811735681,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "count": 2175309043,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "count": 1789638365,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "count": 1805488283,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "count": 3562333745,
+      "partial": false,
+      "providers": [
+        "Codex · 2 of 2 accounts reported"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "count": 3397896856,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "count": 3532676668,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "count": 4287969295,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "count": 3030803743,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "count": 3091846339,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "count": 2449812379,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "count": 3125449397,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "count": 4196389767,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "count": 3377022015,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "count": 3619540751,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "count": 4690942976,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "count": 3145735846,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "count": 4581907123,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "count": 4316635189,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "count": 2431425934,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "count": 1367347753,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "count": 1593192472,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "count": 1331314606,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "count": 1210800585,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "count": 604960747,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "count": 1806413318,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "count": 1046562405,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "count": 904574472,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "count": 1179512719,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "count": 1801716511,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-07",
+      "count": 1238652028,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "count": 102089751,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "count": 1581942817,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "count": 1543777105,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "count": 1360378027,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "count": 1386579241,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "count": 2178416800,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "count": 857632770,
+      "partial": true,
+      "providers": [
+        "Codex · 1 of 2 accounts reported (partial)"
+      ]
+    }
+  ]
+}
