@@ -1,0 +1,4 @@
+export const dynamic = "force-static";
+import { getArticles, xmlEscape } from "@/lib/content";
+import { site } from "@/data/site";
+export function GET(){const items=getArticles().map(a=>`<item><title>${xmlEscape(a.title)}</title><link>${xmlEscape(`${site.url}/writing/${a.slug}`)}</link><guid>${xmlEscape(`${site.url}/writing/${a.slug}`)}</guid><description>${xmlEscape(a.description)}</description><pubDate>${new Date(`${a.publishedAt}T12:00:00Z`).toUTCString()}</pubDate></item>`).join("");return new Response(`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${xmlEscape(site.name)} — Writing</title><link>${xmlEscape(site.url)}/writing</link><description>Writing on AI, systems, and useful things.</description><language>en-us</language>${items}</channel></rss>`,{headers:{"Content-Type":"application/rss+xml; charset=utf-8","Cache-Control":"public, max-age=3600"}});}

@@ -1,0 +1,37 @@
+---
+slug: bayesian-inference
+title: Bayesian Inference
+subtitle: Reasoning with incomplete information.
+description: A Python exploration of exact enumeration and sampling methods for querying a small Bayesian network.
+draft: false
+role: Individual academic project
+status: Academic exploration
+category: Probabilistic reasoning
+context: Inference algorithms & conditional probability
+order: 4
+repository: https://github.com/Vishvendra07/Bayesian-Network-Inference-Program
+technologies: [Python, Bayesian networks, Exact inference, Sampling]
+tags: [Algorithms, Probability, Academic]
+---
+
+## A small network, a deeper question
+
+What changes when an observation becomes evidence? This project explores that question through a small Bayesian network: variables, conditional probability tables, and queries that ask what is likely given what is known.
+
+The implementation keeps the mechanics visible in Python rather than delegating inference to a probabilistic programming framework.
+
+## Enumeration and approximation
+
+Exact inference enumerates possible assignments and combines their probabilities. Sampling offers a different route: generate possible worlds, filter or weight them using the evidence, and estimate the query from the resulting population.
+
+The command-line program exposes exact enumeration and sampling modes, including rejection sampling and likelihood weighting. Sample count and repeated runs make computational effort an explicit part of the experiment.
+
+## The value of the comparison
+
+An exact result is a useful reference for a small network. Approximate methods make the effect of sample size, rare evidence, and random variation tangible. That relationship between a reference calculation and an estimate is the central learning exercise.
+
+This is an academic implementation, with fixed network assumptions and no claim of production validation or general-purpose inference support.
+
+## Explore the source
+
+The [public repository](https://github.com/Vishvendra07/Bayesian-Network-Inference-Program) contains the implementation and query examples. The [latency experiment](/lab/latency-budget) explores another engineering tradeoff: where computation belongs on the critical path.

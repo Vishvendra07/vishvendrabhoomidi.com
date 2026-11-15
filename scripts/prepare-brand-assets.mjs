@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const simple=require('simple-icons');
+const brands=require('@fortawesome/free-brands-svg-icons');
+const selected={x:'siX',instagram:'siInstagram',python:'siPython',typescript:'siTypescript',react:'siReact',nextjs:'siNextdotjs',fastapi:'siFastapi',postgresql:'siPostgresql',redis:'siRedis',docker:'siDocker',cloudflare:'siCloudflare',pytorch:'siPytorch',tensorflow:'siTensorflow',github:'siGithub',email:'siGmail',whatsapp:'siWhatsapp',shopify:'siShopify',sentry:'siSentry',calendar:'siGooglecalendar',nodejs:'siNodedotjs',mongodb:'siMongodb',vitest:'siVitest',radix:'siRadixui',tailwind:'siTailwindcss',supabase:'siSupabase',mcp:'siModelcontextprotocol',actions:'siGithubactions',pydantic:'siPydantic',sqlalchemy:'siSqlalchemy',tanstack:'siReactquery',scikitlearn:'siScikitlearn',streamlit:'siStreamlit',numpy:'siNumpy',pytest:'siPytest',openai:'siOpenai'};
+fs.mkdirSync('public/marks',{recursive:true});const notices=[];
+for(const [name,key]of Object.entries(selected)){const icon=simple[key];if(!icon){console.log('Not in this icon version:',key);continue;}fs.writeFileSync(`public/marks/${name}.svg`,icon.svg);notices.push({name,title:icon.title,source:icon.source,license:icon.license||'See brand guidelines',guidelines:icon.guidelines});}
+for(const [name,key]of [['aws','faAws'],['linkedin','faLinkedin']]){const icon=brands[key].icon;const paths=Array.isArray(icon[4])?icon[4]:[icon[4]];fs.writeFileSync(`public/marks/${name}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${icon[0]} ${icon[1]}">${paths.map(p=>`<path d="${p}"/>`).join('')}</svg>`);notices.push({name,source:`https://fontawesome.com/icons/${name}?f=brands&s=brands`,license:'CC BY 4.0 (Font Awesome Free icons)'});}
+const universitySources=[{name:'michigan',source:'https://rna.umich.edu/wp-content/uploads/2024/07/block_m-hex.png',guidelines:'https://brand.umich.edu/',license:'University trademark; official supplied geometry, educational affiliation only'},{name:'penn-state',source:'https://www.psu.edu/',guidelines:'https://brand.psu.edu/',license:'University trademark; official Nittany Lion shield SVG from university masthead, educational affiliation only'}];
+for(const entry of universitySources)if(fs.existsSync(`public/marks/${entry.name}.${entry.name==='michigan'?'png':'svg'}`))notices.push(entry);
+fs.writeFileSync('src/data/brand-sources.json',JSON.stringify(notices,null,2));

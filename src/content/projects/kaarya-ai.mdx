@@ -1,0 +1,62 @@
+---
+slug: kaarya-ai
+title: Kaarya AI
+subtitle: From conversation to execution.
+description: A multi-tenant AI execution platform connecting conversations, customer context, and operational workflows for service businesses.
+draft: false
+tags: [AI systems, Product engineering, Founder]
+role: Founder & Lead Engineer
+status: Founder venture
+category: Founder venture
+context: Service-business operations
+period: August 2025 — Present
+order: 0
+visibility: public
+technologies: [Python, FastAPI, React, TypeScript, PostgreSQL, Redis, AI agents]
+---
+
+## The work after the conversation
+
+Service businesses do not stop at answering a question. They qualify a lead, arrange a consultation, collect documents, coordinate a team, and follow up. Each step needs the context from the conversation before it.
+
+I founded Kaarya AI in August 2025 and lead its engineering. My work spans customer discovery, solution design, implementation, integrations, onboarding, and troubleshooting. The product connects messaging and voice experiences to the operational work behind them.
+
+## A product people can work in
+
+The React/TypeScript application brings together lead, inbox, calendar, and document workspaces. TanStack Query handles server state and pagination; Zod-validated forms and typed FastAPI/OpenAPI contracts connect interface actions to backend behavior.
+
+The My Work/Team action desk organizes ownership, due dates, and explicit waiting or review states. Those states matter: an actionable workspace needs to show what is ready, who owns it, and what is blocked.
+
+## A modular API, independent workers
+
+The backend uses Python and FastAPI with Pydantic models, SQLAlchemy data access, Alembic migrations, PostgreSQL, and Redis. It is a modular API with independent workers, rather than a collection of independently deployed services for every product domain.
+
+Retryable work moves off the API request path. Calendar workers claim persisted PostgreSQL jobs with `SKIP LOCKED`, record attempts, and apply exponential retries. Optimistic version checks, idempotency keys, and transactional outbox events support traceable workflow outcomes.
+
+## Boundaries before actions
+
+Tenant and current-membership context are applied to PostgreSQL transactions, alongside row-level security and role-based permissions. Redis-backed session handling includes atomic refresh-token rotation, replay detection, and family revocation.
+
+Integration services connect WhatsApp, Plivo, Google Calendar, Shopify Admin GraphQL, and payments. OAuth, signed webhooks, event deduplication, and recovery states are part of the handoff between a provider event and an application action.
+
+## AI with context and tools
+
+Stateful agents combine tenant-scoped knowledge retrieval with structured tool calls. The retrieval pipeline covers document ingestion, embeddings, and pgvector search. MCP adapters add discovery, schema checks, and access to permitted application tools.
+
+Voice work includes Pipecat/Plivo pipelines, Deepgram/Sarvam speech recognition, Sarvam speech synthesis, and WebSocket transport. The language handling spans English, Hindi, Telugu, and mixed-language turns. That implementation scope is separate from a claim of measured acoustic accuracy or universal call success.
+
+## Debugging the actual handoff
+
+One post-call extraction issue lost degree details. The corrected handling preserved relevant facts while rejecting negated, uncertain, or stale evidence. A retained October 18, 2026 record reports **38 offline regression tests** for that work.
+
+A separate October 18 diagnostic examined a **19-turn single real call**, separating recognition, inference, synthesis, and playback. Model response was the dominant observed delay in that sample. Different stages had different sample counts, so the analysis does not establish a population P95, a general speedup, or a platform-wide latency guarantee.
+
+<Callout title="Evidence with a scope">The test count is a historical offline regression result. The latency work is a single-call diagnostic. Neither is a new test run, a production success rate, or a claim that every voice acceptance gate is complete.</Callout>
+
+## Delivery and feedback
+
+The engineering toolkit includes Dockerized APIs/workers on AWS ECS/Fargate and frontend delivery on Cloudflare Pages. CI configuration, readiness probes, Sentry diagnostics, and retained artifact identities support delivery and rollback work.
+
+Customer-facing implementation brings the loop back to the product: demonstrations, workflow configuration, onboarding, and reported failures inform the next engineering decision. Current deployment health and broad release readiness are not asserted by this case study.
+
+Explore the [public Kaarya website](https://kaaryaai.com), or pull apart the concepts in [From message to action](/lab/message-pipeline) and [The latency budget](/lab/latency-budget).

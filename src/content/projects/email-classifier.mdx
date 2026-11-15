@@ -1,0 +1,37 @@
+---
+slug: email-classifier
+title: Email Classifier
+subtitle: Finding structure in the inbox.
+description: An NLP experiment comparing classical and neural classifiers, with a Streamlit interface for inspecting email categories.
+draft: false
+role: Individual project
+status: Research prototype
+category: Natural language processing
+context: Model comparison & interface prototype
+order: 3
+repository: https://github.com/Vishvendra07/AI-Powered-Email-Classifier
+technologies: [Python, scikit-learn, TensorFlow, Streamlit]
+tags: [NLP, Machine learning, Prototype]
+---
+
+## One input, several approaches
+
+Email classification is a useful meeting point for text processing, model selection, and interface design. This project explores that path in a notebook, then brings a trained classifier into a small Streamlit application.
+
+The notebook compares random forests, support vector machines, and a one-dimensional convolutional neural network. TF-IDF represents the text numerically, making the transformation from raw message to model input explicit.
+
+## The handoff to an interface
+
+The application accepts pasted email text, removes HTML and URLs, normalizes the input, and applies a saved vectorizer and neural model. It presents a predicted category with a short category explanation.
+
+Those explanations are general descriptions of the categories. They are not per-prediction feature attributions or evidence that an email is safe.
+
+## What the experiment establishes
+
+<Callout title="An experiment with clear limits">The notebook includes artificially expanded phishing examples. Its evaluation is exploratory and does not establish real-world detection accuracy. The saved model and vectorizer are separate artifacts required by the interface.</Callout>
+
+The useful work here is the comparison of modeling approaches and the connection between preprocessing, inference, and presentation. A production system would need independently held-out data, reproducible model artifacts, drift monitoring, and careful treatment of false positives.
+
+## Explore the source
+
+The [public repository](https://github.com/Vishvendra07/AI-Powered-Email-Classifier) contains the notebook and Streamlit application. For another view of uncertainty, explore [Bayesian inference](/work/bayesian-inference).

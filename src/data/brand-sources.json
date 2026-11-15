@@ -1,0 +1,247 @@
+[
+  {
+    "name": "x",
+    "title": "X",
+    "source": "https://x.com",
+    "license": "See brand guidelines",
+    "guidelines": "https://about.x.com/en/who-we-are/brand-toolkit"
+  },
+  {
+    "name": "instagram",
+    "title": "Instagram",
+    "source": "https://about.meta.com/brand/resources/instagram",
+    "license": "See brand guidelines",
+    "guidelines": "https://about.meta.com/brand/resources/instagram"
+  },
+  {
+    "name": "python",
+    "title": "Python",
+    "source": "https://www.python.org/community/logos/",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.python.org/community/logos/"
+  },
+  {
+    "name": "typescript",
+    "title": "TypeScript",
+    "source": "https://www.typescriptlang.org/branding",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.typescriptlang.org/branding"
+  },
+  {
+    "name": "react",
+    "title": "React",
+    "source": "https://github.com/facebook/create-react-app/blob/282c03f9525fdf8061ffa1ec50dce89296d916bd/test/fixtures/relative-paths/src/logo.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "nextjs",
+    "title": "Next.js",
+    "source": "https://vercel.com/design/brands#next-js",
+    "license": "See brand guidelines",
+    "guidelines": "https://vercel.com/design/brands#next-js"
+  },
+  {
+    "name": "fastapi",
+    "title": "FastAPI",
+    "source": "https://github.com/tiangolo/fastapi/blob/ffb4f77a11f83132b521ba0aac6c95792c19e797/docs/en/docs/img/icon-white.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "postgresql",
+    "title": "PostgreSQL",
+    "source": "https://wiki.postgresql.org/wiki/Logo",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.postgresql.org/about/policies/trademarks/"
+  },
+  {
+    "name": "redis",
+    "title": "Redis",
+    "source": "https://redis.io/brand-guidelines",
+    "license": "See brand guidelines",
+    "guidelines": "https://redis.io/brand-guidelines"
+  },
+  {
+    "name": "docker",
+    "title": "Docker",
+    "source": "https://www.docker.com/company/newsroom/media-resources",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "cloudflare",
+    "title": "Cloudflare",
+    "source": "https://www.cloudflare.com/logo/",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.cloudflare.com/trademark/"
+  },
+  {
+    "name": "pytorch",
+    "title": "PyTorch",
+    "source": "https://github.com/pytorch/pytorch.github.io/blob/8f083bd12192ca12d5e1c1f3d236f4831d823d8f/assets/images/logo.svg",
+    "license": "See brand guidelines",
+    "guidelines": "https://github.com/pytorch/pytorch.github.io/blob/381117ec296f002b2de475402ef29cca6c55e209/assets/brand-guidelines/PyTorch-Brand-Guidelines.pdf"
+  },
+  {
+    "name": "tensorflow",
+    "title": "TensorFlow",
+    "source": "https://www.tensorflow.org",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "github",
+    "title": "GitHub",
+    "source": "https://github.com/logos",
+    "license": "See brand guidelines",
+    "guidelines": "https://github.com/logos"
+  },
+  {
+    "name": "email",
+    "title": "Gmail",
+    "source": "https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "whatsapp",
+    "title": "WhatsApp",
+    "source": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+    "license": "See brand guidelines",
+    "guidelines": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand"
+  },
+  {
+    "name": "shopify",
+    "title": "Shopify",
+    "source": "https://www.shopify.com/brand-assets",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.shopify.com/brand-assets"
+  },
+  {
+    "name": "sentry",
+    "title": "Sentry",
+    "source": "https://sentry.io/branding/",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "calendar",
+    "title": "Google Calendar",
+    "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "nodejs",
+    "title": "Node.js",
+    "source": "https://nodejs.org/en/about/branding",
+    "license": "See brand guidelines",
+    "guidelines": "https://nodejs.org/en/about/branding"
+  },
+  {
+    "name": "mongodb",
+    "title": "MongoDB",
+    "source": "https://www.mongodb.com/pressroom",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "vitest",
+    "title": "Vitest",
+    "source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vitest/vitest-icon-color-bracketless.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "radix",
+    "title": "Radix UI",
+    "source": "https://www.radix-ui.com",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "tailwind",
+    "title": "Tailwind CSS",
+    "source": "https://tailwindcss.com/brand",
+    "license": "See brand guidelines",
+    "guidelines": "https://tailwindcss.com/brand"
+  },
+  {
+    "name": "supabase",
+    "title": "Supabase",
+    "source": "https://github.com/supabase/supabase/blob/4031a7549f5d46da7bc79c01d56be4177dc7c114/packages/common/assets/images/supabase-logo-wordmark--light.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "mcp",
+    "title": "Model Context Protocol",
+    "source": "https://github.com/modelcontextprotocol/docs/blob/573dc60c2e7aab2605b29d0bf27194aa7b02e4fb/logo/light.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "actions",
+    "title": "GitHub Actions",
+    "source": "https://github.com/features/actions",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "pydantic",
+    "title": "Pydantic",
+    "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "sqlalchemy",
+    "title": "SQLAlchemy",
+    "source": "https://commons.wikimedia.org/wiki/File:SQLAlchemy.svg",
+    "license": {
+      "type": "MIT",
+      "url": "https://spdx.org/licenses/MIT"
+    }
+  },
+  {
+    "name": "tanstack",
+    "title": "React Query",
+    "source": "https://github.com/tannerlinsley/react-query/blob/9b5d18cd47a4c1454d6c8dd0f38280641c1dd5dd/docs/src/images/emblem-light.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "scikitlearn",
+    "title": "scikit-learn",
+    "source": "https://github.com/scikit-learn/scikit-learn/blob/c5ef2e985c13119001aa697e446ebb3dbcb326e5/doc/logos/scikit-learn-logo.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "streamlit",
+    "title": "Streamlit",
+    "source": "https://www.streamlit.io/brand",
+    "license": "See brand guidelines",
+    "guidelines": "https://www.streamlit.io/brand"
+  },
+  {
+    "name": "numpy",
+    "title": "NumPy",
+    "source": "https://numpy.org/press-kit/",
+    "license": "See brand guidelines",
+    "guidelines": "https://github.com/numpy/numpy/blob/main/branding/logo/logoguidelines.md"
+  },
+  {
+    "name": "pytest",
+    "title": "Pytest",
+    "source": "https://github.com/pytest-dev/design/blob/081f06cd2d6cd742e68f593560a2e8c1802feb7c/pytest_logo/pytest_logo.svg",
+    "license": "See brand guidelines"
+  },
+  {
+    "name": "aws",
+    "source": "https://fontawesome.com/icons/aws?f=brands&s=brands",
+    "license": "CC BY 4.0 (Font Awesome Free icons)"
+  },
+  {
+    "name": "linkedin",
+    "source": "https://fontawesome.com/icons/linkedin?f=brands&s=brands",
+    "license": "CC BY 4.0 (Font Awesome Free icons)"
+  },
+  {
+    "name": "michigan",
+    "source": "https://rna.umich.edu/wp-content/uploads/2024/07/block_m-hex.png",
+    "guidelines": "https://brand.umich.edu/",
+    "license": "University trademark; official supplied geometry, educational affiliation only"
+  },
+  {
+    "name": "penn-state",
+    "source": "https://www.psu.edu/",
+    "guidelines": "https://brand.psu.edu/",
+    "license": "University trademark; official Nittany Lion shield SVG from university masthead, educational affiliation only"
+  }
+]

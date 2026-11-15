@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+# Private import sources and QA output never belong in public assets.
+.private/
+src/data/activity.json.tmp
+playwright-report/
+test-results/
+verification/screenshots/
+verification/lighthouse-*.json
+
+# Local audit and private launch material
+/verification/
+/docs/
+/.cloudflare/
+*.zip
+*.log
+
+# Owner essay remains an unpublished local draft.
+src/content/articles/designing-the-handoff.mdx

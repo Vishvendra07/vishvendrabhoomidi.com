@@ -1,0 +1,41 @@
+---
+slug: nutrilens-ai
+title: NutriLensAI
+subtitle: Making the label readable.
+description: An OCR and neural-classification prototype that turns nutrition-label images into structured analysis, with an explicit synthetic-data boundary.
+draft: false
+role: Sole developer and designer
+status: Research prototype
+category: Applied AI
+context: OCR & classification prototype
+order: 1
+repository: https://github.com/Vishvendra07/NutriLensAI
+technologies: [Python, EasyOCR, PyTorch, Streamlit]
+tags: [Applied AI, Computer vision, Prototype]
+---
+
+## Reading the small print
+
+NutriLensAI explores the path from a photographed nutrition label to structured, explainable output. I built the prototype around OCR, rule-based annotation, and a neural classifier, with a Streamlit interface for reviewing the result.
+
+The interesting engineering problem is the handoff: an image becomes imperfect text; text becomes nutritional features; those features become an output that a person needs to understand.
+
+## From pixels to features
+
+EasyOCR extracts text from the label image. Parsing and preprocessing organize the text into nutritional features. Rule-based logic and a PyTorch multilayer perceptron then support the classification step.
+
+The training work uses weighted loss to account for class imbalance and early stopping to limit unnecessary training. The interface brings extraction, analysis, and explanation into one place rather than leaving the model as an isolated notebook result.
+
+## An interface for inspection
+
+The Streamlit application connects image upload, extracted nutrients, and visual explanations. Charts help inspect the input and output; the point is to make the classification understandable, not to hide uncertainty behind a single label.
+
+## The boundary matters
+
+<Callout title="Prototype, not clinical validation">Training and evaluation use synthetic data. This project does not establish real-world nutritional accuracy, medical usefulness, or clinical safety. It should not be used as medical or dietary guidance.</Callout>
+
+The portfolio intentionally leaves out the older headline accuracy figure. A score on synthetic validation data is not evidence that a classifier is reliable on real food labels or suitable for health decisions.
+
+## Explore the work
+
+The [public repository](https://github.com/Vishvendra07/NutriLensAI) documents the prototype. For a different kind of AI handoff, explore [Kaarya AI](/work/kaarya-ai) and the educational [message-to-action pipeline](/lab/message-pipeline).
