@@ -1,0 +1,1340 @@
+{
+  "version": 1,
+  "source": "cursor-export",
+  "unit": "tokens",
+  "timezone": "UTC",
+  "importedAt": "2026-11-15T21:36:32.200Z",
+  "accountCount": 2,
+  "recordCount": 7172,
+  "totalTokens": 9337954122,
+  "days": [
+    {
+      "date": "2025-09-05",
+      "count": 5135270,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-06",
+      "count": 45493765,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-08",
+      "count": 34484359,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-09",
+      "count": 16950781,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-10",
+      "count": 84733173,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-11",
+      "count": 48473255,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-12",
+      "count": 131158806,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-13",
+      "count": 79668617,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-14",
+      "count": 48018226,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-15",
+      "count": 44788643,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-24",
+      "count": 38922544,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-25",
+      "count": 95574551,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-26",
+      "count": 72108249,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-27",
+      "count": 35561722,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-28",
+      "count": 57529083,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-29",
+      "count": 52604042,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-09-30",
+      "count": 150700407,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-01",
+      "count": 118751072,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-02",
+      "count": 82046294,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-03",
+      "count": 13973693,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-05",
+      "count": 49678995,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-07",
+      "count": 1563599,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-08",
+      "count": 28982638,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-09",
+      "count": 119237527,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-10",
+      "count": 223334929,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-11",
+      "count": 168882388,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-12",
+      "count": 41741655,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-13",
+      "count": 62504376,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-14",
+      "count": 183383257,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-15",
+      "count": 65861143,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-16",
+      "count": 187762220,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-17",
+      "count": 54444503,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-18",
+      "count": 82650764,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-19",
+      "count": 161969130,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-20",
+      "count": 44779037,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-21",
+      "count": 40734693,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-22",
+      "count": 170277554,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-23",
+      "count": 183644882,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-24",
+      "count": 119172484,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-25",
+      "count": 27764139,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-26",
+      "count": 148196717,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-27",
+      "count": 106664755,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-28",
+      "count": 87491858,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-29",
+      "count": 33848701,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-30",
+      "count": 131450812,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-10-31",
+      "count": 71039474,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-01",
+      "count": 10057417,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-02",
+      "count": 8788077,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-03",
+      "count": 20560096,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-06",
+      "count": 19459211,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-08",
+      "count": 61466331,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-09",
+      "count": 46187525,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-10",
+      "count": 6698291,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-11",
+      "count": 26451394,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-12",
+      "count": 30405537,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-13",
+      "count": 28759885,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-14",
+      "count": 60185195,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-15",
+      "count": 38180302,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-16",
+      "count": 22435403,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-17",
+      "count": 35068212,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-18",
+      "count": 28777439,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-19",
+      "count": 855629,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-20",
+      "count": 8331215,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-21",
+      "count": 17506149,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-22",
+      "count": 26059336,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-23",
+      "count": 36697251,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-24",
+      "count": 6582961,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-25",
+      "count": 49212358,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-26",
+      "count": 1842098,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-11-27",
+      "count": 9962625,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-01",
+      "count": 6862186,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-02",
+      "count": 19736902,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-13",
+      "count": 29101323,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-15",
+      "count": 3482288,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-16",
+      "count": 24918016,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-17",
+      "count": 0,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-18",
+      "count": 69611170,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-19",
+      "count": 14012101,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-21",
+      "count": 206271,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-22",
+      "count": 4392315,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-23",
+      "count": 27410898,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-24",
+      "count": 69812687,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-25",
+      "count": 69402353,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-26",
+      "count": 39568111,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-28",
+      "count": 33042889,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-29",
+      "count": 45942507,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-30",
+      "count": 39472485,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2025-12-31",
+      "count": 33894377,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-02",
+      "count": 7271275,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-03",
+      "count": 24328193,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-04",
+      "count": 36813920,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-05",
+      "count": 33538811,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-06",
+      "count": 54500907,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-07",
+      "count": 43695708,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-08",
+      "count": 19683794,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-09",
+      "count": 21318948,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-10",
+      "count": 29589817,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-11",
+      "count": 24193872,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-12",
+      "count": 5596159,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-13",
+      "count": 133388791,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-14",
+      "count": 34998165,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-15",
+      "count": 28007624,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-16",
+      "count": 33466675,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-17",
+      "count": 11314035,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-19",
+      "count": 35715548,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-20",
+      "count": 35535454,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-21",
+      "count": 66146668,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-22",
+      "count": 139223570,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-23",
+      "count": 75159445,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-24",
+      "count": 80163080,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-25",
+      "count": 99216943,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-26",
+      "count": 93103515,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-27",
+      "count": 70865317,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-28",
+      "count": 53601161,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-29",
+      "count": 67246228,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-30",
+      "count": 117551150,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-01-31",
+      "count": 38651115,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-01",
+      "count": 34438608,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-02",
+      "count": 80546307,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-03",
+      "count": 107586912,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-04",
+      "count": 107849607,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-05",
+      "count": 74085297,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-06",
+      "count": 38912298,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-07",
+      "count": 55166254,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-08",
+      "count": 20467800,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-09",
+      "count": 54704591,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-10",
+      "count": 73730991,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-13",
+      "count": 11492226,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-15",
+      "count": 55399584,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-16",
+      "count": 1281100,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-17",
+      "count": 12085355,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-18",
+      "count": 91233951,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-19",
+      "count": 20844600,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-23",
+      "count": 28453775,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-24",
+      "count": 6825185,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-25",
+      "count": 24081643,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-26",
+      "count": 65427716,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-27",
+      "count": 52019789,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-02-28",
+      "count": 25736059,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-01",
+      "count": 33803762,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-02",
+      "count": 62954314,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-03",
+      "count": 3972580,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-04",
+      "count": 62466454,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-05",
+      "count": 9491356,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-06",
+      "count": 4060965,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-07",
+      "count": 95589075,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-08",
+      "count": 1181613,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-09",
+      "count": 14571464,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-10",
+      "count": 5656259,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-11",
+      "count": 3034146,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-12",
+      "count": 865342,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-13",
+      "count": 66104654,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-14",
+      "count": 92996392,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-15",
+      "count": 5044403,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-16",
+      "count": 179404873,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-17",
+      "count": 111457718,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-18",
+      "count": 105423162,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-19",
+      "count": 46965179,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-20",
+      "count": 240531043,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-21",
+      "count": 192404733,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-22",
+      "count": 118559605,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-23",
+      "count": 53542347,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-24",
+      "count": 129969739,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-25",
+      "count": 59806383,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-26",
+      "count": 77788736,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    },
+    {
+      "date": "2026-03-27",
+      "count": 18914691,
+      "providers": [
+        "Cursor archive"
+      ],
+      "partial": true
+    }
+  ]
+}

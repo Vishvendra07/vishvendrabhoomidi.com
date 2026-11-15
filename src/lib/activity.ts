@@ -1,5 +1,5 @@
 
-export const sourceIds = ["manual-import", "codex", "openai-api", "app-instrumentation", "github"] as const;
+export const sourceIds = ["manual-import", "codex", "combined", "openai-api", "app-instrumentation", "github"] as const;
 export type SourceId = typeof sourceIds[number];
 export type ActivityUnit = "tokens" | "contributions";
 export function validDate(value: string) {

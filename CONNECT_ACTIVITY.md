@@ -25,11 +25,13 @@ Revoked sign-ins, new provider authentication challenges, upstream outages or de
 
 The vault denies public, fork, pull-request, other-workflow and other-repository identities. A per-run lease and version check prevent overlapping runs from overwriting renewed credentials. The workflow never force-pushes or stages unrelated files.
 
-## Cursor history assessment
+## Cursor history included
 
-Cursor’s individual-account dashboard supports CSV export. The first requested account’s actual export was verified privately: 6,537 events, 8,384,607,536 tokens, September 5, 2025–March 27, 2026. This proves a historical import is feasible; it does not establish full lifetime coverage or daily API availability.
+Two owner-verified individual-account exports are included: 7,172 records totaling 9,337,954,122 tokens. Their returned history spans September 5, 2025–March 27, 2026. A third candidate account was excluded at the owner’s request. Only generic daily aggregates and archive provenance enter src/data/cursor-history.json; no addresses, identity hashes, event IDs, model names, costs or raw rows are published.
 
-No documented general personal-account usage API was found. Cursor documents team administration usage endpoints and Enterprise analytics API access. The three individual accounts would therefore need verified exports for an initial historical import. They are not claimed as connected or included in the current Codex lifetime total. Raw exports and their account identities stay private, and repeated exports should replace each account’s import rather than be appended. Use each CSV’s Total Tokens field without adding overlapping cache/input columns again.
+Every hosted Codex refresh automatically retains this archive. Cursor account imports replace snapshots rather than append records. The importer uses the provider’s Total Tokens field and never adds overlapping cache/input columns again. The lifetime headline adds the measured Cursor archive total to both Codex provider lifetime summaries; archive coverage is bounded by what Cursor exported.
+
+No documented general personal-account usage API was found. Current Cursor use would require a supported integration or another owner-verified export; the old archive is not represented as a continuous Cursor API connection.
 
 Sources: https://cursor.com/docs/account/teams/admin-api and https://cursor.com/docs/account/teams/analytics; individual usage API discussion: https://forum.cursor.com/t/usage-api-cli-command/160967.
 

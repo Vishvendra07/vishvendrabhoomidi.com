@@ -1,14 +1,18 @@
 import { base64url, createRemoteJWKSet, jwtVerify, type JWTVerifyGetKey } from "jose";
 const issuer = "https://token.actions.githubusercontent.com";
 const githubKeys = createRemoteJWKSet(new URL(`${issuer}/.well-known/jwks`));
-export type Policy = { repository: string; repositoryId: string; ownerId: string; audience: string };
+export type Policy = { repository: string; repositoryId: string; ownerId: string; subjectPrefix: string; audience: string };
 export async function authenticate(token: string, policy: Policy, keys: JWTVerifyGetKey = githubKeys) {
   const { payload } = await jwtVerify(token, keys, { issuer, audience: policy.audience, algorithms: ["RS256"], maxTokenAge: "10m", requiredClaims: ["exp", "iat", "sub", "run_id", "run_attempt"] });
-  if (payload.repository !== policy.repository || payload.repository_id !== policy.repositoryId || payload.repository_owner_id !== policy.ownerId
-    || payload.ref !== "refs/heads/main" || payload.sub !== `repo:${policy.repository}:ref:refs/heads/main`
-    || payload.workflow_ref !== `${policy.repository}/.github/workflows/sync-activity.yml@refs/heads/main`
-    || !["schedule", "workflow_dispatch"].includes(String(payload.event_name)) || payload.runner_environment !== "github-hosted"
-    || !/^\d+$/.test(String(payload.run_id)) || !/^\d+$/.test(String(payload.run_attempt))) throw new Error("Untrusted workflow identity");
+  const checks = { repository: payload.repository === policy.repository, repositoryId: payload.repository_id === policy.repositoryId, ownerId: payload.repository_owner_id === policy.ownerId,
+    branch: payload.ref === "refs/heads/main", subject: payload.sub === `${policy.subjectPrefix}:ref:refs/heads/main`,
+    workflow: payload.workflow_ref === `${policy.repository}/.github/workflows/sync-activity.yml@refs/heads/main`,
+    event: ["schedule", "workflow_dispatch"].includes(String(payload.event_name)), hosted: payload.runner_environment === "github-hosted",
+    runId: /^\d+$/.test(String(payload.run_id)), attempt: /^\d+$/.test(String(payload.run_attempt)) };
+  if (!Object.values(checks).every(Boolean)) {
+    if (keys === githubKeys) console.log(JSON.stringify({ event: "identity_policy_checks", checks }));
+    throw new Error("Untrusted workflow identity");
+  }
   return `${payload.run_id}:${payload.run_attempt}`;
 }
 async function key(secret: string) {

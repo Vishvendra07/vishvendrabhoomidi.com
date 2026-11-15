@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import { CodexClient } from "./codex-client";
 import { codexSnapshotSchema, codexUsageSchema, combineCodexSnapshots } from "../src/lib/codex-activity";
+import { combineCursorArchive } from "../src/lib/cursor-activity";
 
 const args = process.argv.slice(2);
 const value = (key: string) => args[args.indexOf(key) + 1];
@@ -46,7 +47,8 @@ async function main() {
       const parsed = codexSnapshotSchema.parse(snapshot);
       if (Date.now() - Date.parse(parsed.fetchedAt) > 24 * 60 * 60 * 1000) throw new Error("Refresh both accounts before publishing; snapshot older than 24 hours");
     }
-    const dataset = combineCodexSnapshots(snapshots);
+    const codex = combineCodexSnapshots(snapshots);
+    const dataset = fs.existsSync("src/data/cursor-history.json") ? combineCursorArchive(codex,JSON.parse(fs.readFileSync("src/data/cursor-history.json","utf8"))) : codex;
     save(path.join(directory, "public-preview.json"), dataset);
     if (!args.includes("--reviewed")) { console.log("Sanitized preview saved privately. Review it, then rerun --publish --reviewed. No website data changed."); return; }
     save(path.resolve("src/data/activity.json"), dataset);

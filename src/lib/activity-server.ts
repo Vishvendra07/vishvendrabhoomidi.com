@@ -7,7 +7,7 @@ import { emptyActivity, selectRange, summarize, type ActivityDataset, type Activ
 
 const publicActivitySchema = z.object({
   metadata: z.object({
-    source: z.enum(["manual-import", "codex"]), label: z.string().max(100), unit: z.literal("tokens"),
+    source: z.enum(["manual-import", "codex", "combined"]), label: z.string().max(100), unit: z.literal("tokens"),
     timezone: z.string().refine(value => { try { new Intl.DateTimeFormat("en", { timeZone: value }); return true; } catch { return false; } }),
     verified: z.literal(true), updatedAt: z.iso.datetime().nullable(),
     coverage: z.object({ start: z.string().refine(validDate), end: z.string().refine(validDate), complete: z.boolean() }).strict().nullable(),
@@ -19,7 +19,7 @@ export function loadActivity(): ActivityDataset {
   const file = path.join(process.cwd(), "src/data/activity.json");
   if (!fs.existsSync(file)) return emptyActivity();
   const data = publicActivitySchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
-  if (!data.metadata.verified || !["manual-import", "codex"].includes(data.metadata.source)) throw new Error("Activity data must be owner-reviewed before use");
+  if (!data.metadata.verified || !["manual-import", "codex", "combined"].includes(data.metadata.source)) throw new Error("Activity data must be owner-reviewed before use");
   return data;
 }
 export class ManualActivityProvider implements ActivityProvider {

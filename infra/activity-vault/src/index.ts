@@ -37,7 +37,7 @@ export class CredentialVault extends DurableObject<Env> {
       if (state.lease && state.lease.owner !== owner && state.lease.expires > Date.now()) throw new Error("Busy");
       state.lease = { owner, expires: Date.now() + 20 * 60_000 }; await transaction.put("state", state); return state;
     });
-    return { version: state.version, credentials: await unseal(state.sealed, this.env.VAULT_KEY) };
+    return { version: state.version, credentialsJson: JSON.stringify(await unseal(state.sealed, this.env.VAULT_KEY)) };
   }
   async release(owner: string, version: number, input: unknown) {
     const data = bundle(input); const encrypted = await seal(data, this.env.VAULT_KEY);
@@ -54,6 +54,7 @@ export class CredentialVault extends DurableObject<Env> {
 }
 export default {
   async fetch(request, env) {
+    let stage = "routing";
     const headers = { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff", "X-Robots-Tag": "noindex, nofollow" };
     const reply = (value: unknown, status = 200) => Response.json(value, { status, headers });
     const url = new URL(request.url);
@@ -66,11 +67,27 @@ export default {
         if (!await secretMatches(token, env.BOOTSTRAP_TOKEN)) return reply({ error: "Unauthorized" }, 401);
         return reply({ initialized: await vault.bootstrap(await boundedJson(request)) });
       }
-      const owner = await authenticate(token, { repository: env.TRUSTED_REPOSITORY, repositoryId: env.TRUSTED_REPOSITORY_ID, ownerId: env.TRUSTED_OWNER_ID, audience: url.origin });
+      stage = "identity";
+      const owner = await authenticate(token, { repository: env.TRUSTED_REPOSITORY, repositoryId: env.TRUSTED_REPOSITORY_ID, ownerId: env.TRUSTED_OWNER_ID, subjectPrefix: env.TRUSTED_SUBJECT_PREFIX, audience: url.origin });
+      stage = "body";
       const body = await boundedJson(request);
-      if (body.action === "acquire") return reply(await vault.acquire(owner));
+      if (body.action === "acquire") {
+        stage = "acquire";
+        const session = await vault.acquire(owner);
+        if (String(env.SYNC_ENABLED) !== "true") {
+          stage = "diagnostic_release";
+          const saved = await vault.release(owner, session.version, JSON.parse(session.credentialsJson));
+          console.log(JSON.stringify({ event: "paused_vault_round_trip", saved }));
+          return reply({ error: "Sync paused", diagnostic: saved ? "Vault round trip passed" : "Vault save failed" }, 409);
+        }
+        return reply({ version: session.version, credentials: JSON.parse(session.credentialsJson) });
+      }
       if (body.action === "release" && Number.isSafeInteger(body.version) && body.version > 0) return reply({ saved: await vault.release(owner, body.version, body.credentials) });
       return reply({ error: "Invalid request" }, 400);
-    } catch { return reply({ error: "Request rejected" }, 403); }
+    } catch (error) {
+      const code = typeof error === "object" && error && "code" in error && /^ERR_[A-Z_]+$/.test(String(error.code)) ? String(error.code) : "REJECTED";
+      console.log(JSON.stringify({ event: "vault_request_rejected", stage, code }));
+      return reply({ error: "Request rejected", stage, code }, 403);
+    }
   },
 } satisfies ExportedHandler<Env>;

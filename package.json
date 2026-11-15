@@ -12,6 +12,7 @@
     "test:e2e": "playwright test",
     "activity:import": "tsx scripts/import-activity.ts",
     "activity:connect": "tsx scripts/connect-codex.ts",
+    "activity:cursor": "tsx scripts/import-cursor.ts",
     "release:check": "tsx scripts/release-check.ts",
     "build:static": "tsx scripts/build-static.ts"
   },

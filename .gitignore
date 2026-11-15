@@ -43,6 +43,7 @@ next-env.d.ts
 # Private import sources and QA output never belong in public assets.
 .private/
 src/data/activity.json.tmp
+src/data/cursor-history.json.tmp
 playwright-report/
 test-results/
 verification/screenshots/

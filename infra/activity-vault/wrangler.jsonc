@@ -13,9 +13,11 @@
     "traces": { "enabled": true, "head_sampling_rate": 0.1 }
   },
   "vars": {
+    "SYNC_ENABLED": "true",
     "TRUSTED_REPOSITORY": "Vishvendra07/vishvendrabhoomidi.com",
     "TRUSTED_REPOSITORY_ID": "1459155911",
-    "TRUSTED_OWNER_ID": "89666766"
+    "TRUSTED_OWNER_ID": "89666766",
+    "TRUSTED_SUBJECT_PREFIX": "repo:Vishvendra07@89666766/vishvendrabhoomidi.com@1459155911"
   },
   "secrets": { "required": ["VAULT_KEY", "BOOTSTRAP_TOKEN"] },
   "durable_objects": { "bindings": [{ "name": "VAULT", "class_name": "CredentialVault" }] },

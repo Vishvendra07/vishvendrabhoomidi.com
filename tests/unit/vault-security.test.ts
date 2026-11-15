@@ -1,9 +1,9 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import { base64url, createLocalJWKSet, exportJWK, generateKeyPair, SignJWT, type JWTVerifyGetKey } from "jose";
 import { authenticate, seal, secretMatches, unseal } from "../../infra/activity-vault/src/security";
-const policy = { repository: "owner/portfolio", repositoryId: "123", ownerId: "456", audience: "https://vault.example" };
+const policy = { repository: "owner/portfolio", repositoryId: "123", ownerId: "456", subjectPrefix: "repo:owner@456/portfolio@123", audience: "https://vault.example" };
 let keys: JWTVerifyGetKey, privateKey: CryptoKey;
-const claims = { repository: policy.repository, repository_id: "123", repository_owner_id: "456", ref: "refs/heads/main", sub: "repo:owner/portfolio:ref:refs/heads/main", workflow_ref: "owner/portfolio/.github/workflows/sync-activity.yml@refs/heads/main", event_name: "schedule", runner_environment: "github-hosted", run_id: "99", run_attempt: "1" };
+const claims = { repository: policy.repository, repository_id: "123", repository_owner_id: "456", ref: "refs/heads/main", sub: "repo:owner@456/portfolio@123:ref:refs/heads/main", workflow_ref: "owner/portfolio/.github/workflows/sync-activity.yml@refs/heads/main", event_name: "schedule", runner_environment: "github-hosted", run_id: "99", run_attempt: "1" };
 beforeAll(async () => {
   const pair = await generateKeyPair("RS256"); privateKey = pair.privateKey;
   keys = createLocalJWKSet({ keys: [{ ...await exportJWK(pair.publicKey), kid: "test" }] });

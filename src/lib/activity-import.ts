@@ -31,7 +31,7 @@ export function normalizeImport(input: unknown, now = new Date()): ActivityDatas
   normalized.reduce((total, d) => safeSum(total, d.count || 0), 0);
   return { metadata: { source: "manual-import", label: "Owner-reviewed import", unit: "tokens", timezone: data.timezone, verified: false, updatedAt: now.toISOString(), coverage: data.coverage }, days: normalized };
 }
-export function parseCsv(csv: string): unknown[] {
+export function parseCsvRows(csv: string): string[][] {
   // A real CSV parser: quoted commas, escaped quotes, BOM, and CRLF are supported.
   const rows: string[][] = []; let row: string[] = [], cell = "", quoted = false;
   const source = csv.replace(/^\uFEFF/, "");
@@ -44,6 +44,10 @@ export function parseCsv(csv: string): unknown[] {
   }
   if (quoted) throw new Error("Unterminated CSV quote");
   if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
+}
+export function parseCsv(csv: string): unknown[] {
+  const rows = parseCsvRows(csv);
   const headers = rows.shift();
   const expected = ["date", "provider", "inputTokens", "outputTokens", "totalTokens"];
   if (!headers || headers.length !== expected.length || expected.some(h => !headers.includes(h))) throw new Error("CSV headers must be date,provider,inputTokens,outputTokens,totalTokens");

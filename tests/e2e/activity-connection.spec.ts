@@ -4,7 +4,7 @@ import fs from "node:fs";
 import type { ActivityDataset } from "../../src/lib/activity";
 const file = "src/data/activity.json";
 const dataset: ActivityDataset | null = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : null;
-test.skip(dataset?.metadata.source !== "codex", "Requires a genuine published Codex dataset");
+test.skip(!["codex", "combined"].includes(dataset?.metadata.source || ""), "Requires a genuine published Codex dataset");
 
 test("connected activity displays reviewed totals and switches views", async ({ page, request }) => {
   const errors: string[] = [];
@@ -26,6 +26,8 @@ test("connected activity displays reviewed totals and switches views", async ({ 
   await page.getByLabel("Activity date range").selectOption("6");
   await expect(page.locator(".activity-summary strong").first()).toHaveAttribute("title", `${new Intl.NumberFormat("en-US").format(total)} tokens`);
   await expect(page.locator(".activity-summary strong").nth(2)).toHaveText(`${dataset!.metadata.accountSummary!.currentStreakDays}d`);
+  await page.getByLabel("Activity date range").selectOption("all");
+  await expect(page.locator(".activity-detail")).toContainText(dataset!.days[0].date);
   expect(errors).toEqual([]);
   for (const route of ["/.private/codex/a/auth.json", "/.private/codex/snapshot-a.json", "/.private/codex/snapshot-b.json"])
     expect((await request.get(route)).status(), route).toBe(404);
