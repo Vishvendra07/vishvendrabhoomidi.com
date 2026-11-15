@@ -1,0 +1,49 @@
+name: Hosted activity sync
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: hosted-activity-sync
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.repository == 'Vishvendra07/vishvendrabhoomidi.com' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      id-token: write
+      statuses: write
+      checks: read
+    env:
+      ACTIVITY_VAULT_URL: ${{ vars.ACTIVITY_VAULT_URL }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Install pinned official Codex collector
+        run: |
+          npm install --prefix "$RUNNER_TEMP/portfolio-codex" --save-exact @openai/codex@0.169.0
+          echo "CODEX_BINARY=$RUNNER_TEMP/portfolio-codex/node_modules/.bin/codex" >> "$GITHUB_ENV"
+      - name: Refresh both accounts and persist renewed sign-ins
+        run: npx tsx scripts/hosted-activity.ts
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build:static
+      - name: Publish only sanitized activity
+        run: npx tsx scripts/publish-hosted-activity.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Install verification browser
+        run: npx playwright install --with-deps chromium
+      - name: Verify Cloudflare deployment and public data
+        run: npx tsx scripts/verify-hosted-activity.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

@@ -1,53 +1,36 @@
-# Connect both Codex accounts
+# Automatic activity sync
 
-This connects account token activity to “Proof of Building.” It does not merge OpenAI accounts or move conversations between them. The site remains static, with no OpenAI credentials in Cloudflare or GitHub.
+The site refreshes from both connected Codex accounts on GitHub-hosted runners approximately every six hours. Your computer and Codex desktop app can be closed. The previous local automation is paused.
 
-## First connection
+## Hosted flow
 
-Use the installed official `codex` executable and Node 22 from this project directory:
+1. GitHub starts the main-branch `Hosted activity sync` workflow on its schedule.
+2. The runner presents a short-lived GitHub OpenID Connect token to the Cloudflare activity vault. The vault requires this exact repository, numeric owner and repository IDs, workflow path, main branch, a scheduled/manual workflow event, and a GitHub-hosted runner.
+3. The vault leases the two existing account sign-ins to that run. They are encrypted at rest with AES-256-GCM; the master key is a Cloudflare secret. No OpenAI credentials or long-lived GitHub access tokens are stored in repository source or workflow variables.
+4. The pinned official Codex CLI reads provider activity. Both private account identities are checked. Any refreshed sign-in state is persisted back to the vault, including after a partial collection failure.
+5. Only whitelisted aggregate data enters `src/data/activity.json`. Unit tests, lint and the production static build must pass before an automatic fast-forward push.
+6. Cloudflare Pages deploys the change. The hosted job waits for its deployment check, then opens the public site and verifies the lifetime total, both streaks, sync state and privacy boundaries.
 
-```powershell
-npm run activity:connect -- --profile a --login
-npm run activity:connect -- --profile b --login
-```
+The workflow can also be run from the repository’s Actions tab for diagnosis. Routine updates need no manual refresh, review or publishing step. The public site shows “Awaiting sync” if its last successful refresh is more than 36 hours old.
 
-Run these sequentially. Each command saves a temporary sign-in URL in `.private/codex/login-a.json` or `login-b.json`. Open the URL in your browser, select the correct account, and complete OpenAI verification. The command waits up to ten minutes. Use a different OpenAI account for each profile. If the link expires, rerun the command.
+## What is published
 
-The collector launches the official `codex app-server` with its own profile directory and file-based credential storage. It never reads, copies, signs out, or overwrites the desktop app’s current credentials. Credentials and snapshots remain in ignored `.private/codex/`; never share or commit that directory. This directory contains sensitive sign-in state and should remain on your private computer.
+Lifetime tokens sum the two provider lifetime summaries, independently of the chart range. Missing summary totals remain unavailable. Daily, weekly and cumulative charts use returned daily buckets. One account’s absent record is not assumed to be zero.
 
-## Review and publish
+Active days and streaks use the union of positive daily records across the accounts. A positive partial-coverage record still proves activity. The current observed streak can end today or yesterday, allowing today to remain in progress. Missing dates break an observed run; the longest observed streak may understate unreported historical work. Provider calendar labels are preserved because the Codex endpoint does not declare their timezone. UTC selects the refresh reference date.
 
-```powershell
-npm run activity:connect -- --publish
-# Review .private/codex/public-preview.json: only dates, aggregate counts and source labels.
-npm run activity:connect -- --publish --reviewed
-npm run lint
-npm test
-npm run build:static
-```
+## Failure behavior
 
-Review `git diff -- src/data/activity.json`, then commit and push the sanitized dataset to `main`. The existing Cloudflare Pages integration deploys the update. The connection command itself does not push or deploy.
+Revoked sign-ins, new provider authentication challenges, upstream outages or deployment failures stop publication and preserve the previous public snapshot. GitHub exposes failures in the workflow. Provider security decisions can require one-time owner verification; no integration can guarantee that revocation or mandatory verification will never happen.
 
-## Refresh later
+The vault denies public, fork, pull-request, other-workflow and other-repository identities. A per-run lease and version check prevent overlapping runs from overwriting renewed credentials. The workflow never force-pushes or stages unrelated files.
 
-```powershell
-npm run activity:connect -- --refresh
-npm run activity:connect -- --publish
-npm run activity:connect -- --publish --reviewed
-```
+## Cursor history assessment
 
-Both snapshots must be refreshed within 24 hours before publishing. If an account needs reauthentication, rerun its `--profile a --login` or `--profile b --login` command. The website shows a published snapshot, not a continuously updating feed. No scheduled background job is installed.
+Cursor’s individual-account dashboard supports CSV export. The first requested account’s actual export was verified privately: 6,537 events, 8,384,607,536 tokens, September 5, 2025–March 27, 2026. This proves a historical import is feasible; it does not establish full lifetime coverage or daily API availability.
 
-## What the numbers mean
+No documented general personal-account usage API was found. Cursor documents team administration usage endpoints and Enterprise analytics API access. The three individual accounts would therefore need verified exports for an initial historical import. They are not claimed as connected or included in the current Codex lifetime total. Raw exports and their account identities stay private, and repeated exports should replace each account’s import rather than be appended. Use each CSV’s Total Tokens field without adding overlapping cache/input columns again.
 
-- Source: the official app-server `account/usage/read` method, using subscription-backed Codex sign-in. API keys do not provide these account records.
-- Only daily buckets are combined. Account lifetime summaries, peak values, and streaks are not added together.
-- All explicitly reported daily records contribute to observed totals. Days reported by only one account are labeled partial. Dates absent from both accounts remain missing; no zeroes are inferred.
-- Dates retain the provider’s calendar labels. The endpoint does not declare the bucket timezone. UTC is used only for formatting snapshot timestamps.
-- Stable account identities are hashed privately to prevent connecting one account twice. No identity hashes, addresses, auth data, prompts, conversation titles, repositories, or raw account responses enter the website dataset.
-- Daily history is optional upstream. Missing/empty history, duplicate dates, unsafe counts, duplicate accounts stop publication and preserve existing public data.
-- Repeated refreshes replace each account’s snapshot and rebuild totals. They do not append usage or count it twice.
+Sources: https://cursor.com/docs/account/teams/admin-api and https://cursor.com/docs/account/teams/analytics; individual usage API discussion: https://forum.cursor.com/t/usage-api-cli-command/160967.
 
-Official protocol: https://learn.chatgpt.com/docs/app-server
-
-The separate `activity:import` workflow remains available for owner-reviewed token CSV/JSON imports. ChatGPT conversation exports are a different source and do not establish measured Codex token usage.
+Official Codex protocol: https://learn.chatgpt.com/docs/app-server.

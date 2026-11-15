@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { dateRange, safeSum, validDate, type ActivityDataset } from "./activity";
+import { dateRange, observedStreaks, safeSum, validDate, type ActivityDataset } from "./activity";
 
 const count = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER);
 export const codexUsageSchema = z.object({
@@ -40,7 +40,10 @@ export function combineCodexSnapshots(input: unknown[], now = new Date()): Activ
       providers: observed.length ? [`Codex · ${observed.length} of 2 accounts reported${observed.length < 2 ? " (partial)" : ""}`] : [],
     };
   });
-  return { metadata: { source: "codex", label: "Codex · two accounts", unit: "tokens", timezone: "UTC", verified: true,
+  const totals = accounts.map(account => account.usage.summary.lifetimeTokens);
+  const lifetimeTokens = totals.every(total => total !== null) ? totals.reduce<number>((sum, total) => safeSum(sum, total!), 0) : null;
+  return { metadata: { source: "codex", label: "In sync", unit: "tokens", timezone: "UTC", verified: true,
+    accountSummary: { lifetimeTokens, ...observedStreaks(days, now.toISOString().slice(0,10)) },
     updatedAt: accounts.map(a => a.fetchedAt).sort()[0],
     coverage: { start: dates[0], end: dates.at(-1)!, complete: false },
   }, days };

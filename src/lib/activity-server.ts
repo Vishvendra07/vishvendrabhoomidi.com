@@ -11,6 +11,7 @@ const publicActivitySchema = z.object({
     timezone: z.string().refine(value => { try { new Intl.DateTimeFormat("en", { timeZone: value }); return true; } catch { return false; } }),
     verified: z.literal(true), updatedAt: z.iso.datetime().nullable(),
     coverage: z.object({ start: z.string().refine(validDate), end: z.string().refine(validDate), complete: z.boolean() }).strict().nullable(),
+    accountSummary: z.object({ lifetimeTokens: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), currentStreakDays: z.number().int().nonnegative().nullable(), longestStreakDays: z.number().int().nonnegative(), activeDays: z.number().int().nonnegative(), streakAsOf: z.string().refine(validDate) }).strict().optional(),
   }).strict(),
   days: z.array(z.object({ date: z.string().refine(validDate), count: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), providers: z.array(z.string().max(100)).max(20), partial: z.boolean().optional() }).strict()).max(3661),
 }).strict();

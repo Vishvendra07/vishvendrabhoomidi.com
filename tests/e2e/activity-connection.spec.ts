@@ -11,19 +11,21 @@ test("connected activity displays reviewed totals and switches views", async ({ 
   page.on("pageerror", error => errors.push(error.message));
   await page.goto("/");
   await page.locator(".activity-section").scrollIntoViewIfNeeded();
-  await expect(page.locator(".source-badge")).toHaveText("Codex · two accounts", {timeout:15_000});
-  await expect(page.locator(".activity-summary")).toContainText("OBSERVED TOKENS IN RANGE");
-  const total = dataset!.days.reduce((sum, day) => sum + (day.count || 0), 0);
+  await expect(page.locator(".source-badge")).toHaveText("In sync", {timeout:15_000});
+  await expect(page.locator(".activity-summary")).toContainText("LIFETIME TOKENS");
+  const total = dataset!.metadata.accountSummary!.lifetimeTokens!;
   await expect(page.locator(".activity-summary strong").first()).toHaveAttribute("title", `${new Intl.NumberFormat("en-US").format(total)} tokens`);
-  await expect(page.locator(".activity-note").filter({ hasText: "partial" }).first()).toBeVisible();
+  await expect(page.locator(".activity-note")).toHaveCount(0);
+  await expect(page.getByText("View accessible data table", {exact:true})).toHaveCount(0);
   await page.getByRole("button", { name: "Weekly", exact: true }).click();
   await expect(page.getByLabel("Weekly activity totals")).toBeVisible();
   await page.getByRole("button", { name: "Cumulative", exact: true }).click();
   await expect(page.locator(".cumulative-chart svg")).toBeVisible();
   expect(await page.locator(".cumulative-chart path").count()).toBeGreaterThan(0);
   await page.getByRole("button", { name: "Daily", exact: true }).click();
-  await page.getByText("View accessible data table", { exact: true }).click();
-  await expect(page.getByRole("table")).toBeVisible();
+  await page.getByLabel("Activity date range").selectOption("6");
+  await expect(page.locator(".activity-summary strong").first()).toHaveAttribute("title", `${new Intl.NumberFormat("en-US").format(total)} tokens`);
+  await expect(page.locator(".activity-summary strong").nth(2)).toHaveText(`${dataset!.metadata.accountSummary!.currentStreakDays}d`);
   expect(errors).toEqual([]);
   for (const route of ["/.private/codex/a/auth.json", "/.private/codex/snapshot-a.json", "/.private/codex/snapshot-b.json"])
     expect((await request.get(route)).status(), route).toBe(404);
@@ -37,7 +39,7 @@ test("connected chart fits both themes on mobile and desktop", async ({ page }) 
       await page.setViewportSize({ width, height: 1000 });
       await page.goto("/");
       await page.locator(".activity-section").scrollIntoViewIfNeeded();
-      await expect(page.locator(".source-badge")).toHaveText("Codex · two accounts", {timeout:15_000});
+      await expect(page.locator(".source-badge")).toHaveText("In sync", {timeout:15_000});
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
       await page.locator(".activity-section").screenshot({ path: `verification/screenshots/activity-connected-${width}-${colorScheme}.png` });
     }

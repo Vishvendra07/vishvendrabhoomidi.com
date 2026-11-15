@@ -1,11 +1,18 @@
 {
   "metadata": {
     "source": "codex",
-    "label": "Codex · two accounts",
+    "label": "In sync",
     "unit": "tokens",
     "timezone": "UTC",
     "verified": true,
-    "updatedAt": "2026-11-15T20:11:40.808Z",
+    "accountSummary": {
+      "lifetimeTokens": 192832237669,
+      "currentStreakDays": 112,
+      "longestStreakDays": 112,
+      "activeDays": 229,
+      "streakAsOf": "2026-11-15"
+    },
+    "updatedAt": "2026-11-15T20:36:15.487Z",
     "coverage": {
       "start": "2026-02-15",
       "end": "2026-11-14",

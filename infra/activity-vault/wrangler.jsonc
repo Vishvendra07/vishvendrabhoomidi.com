@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-activity-vault",
+  "account_id": "747d3d0e93c333fade30ca9722a6542d",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "invocation_logs": false },
+    "traces": { "enabled": true, "head_sampling_rate": 0.1 }
+  },
+  "vars": {
+    "TRUSTED_REPOSITORY": "Vishvendra07/vishvendrabhoomidi.com",
+    "TRUSTED_REPOSITORY_ID": "1459155911",
+    "TRUSTED_OWNER_ID": "89666766"
+  },
+  "secrets": { "required": ["VAULT_KEY", "BOOTSTRAP_TOKEN"] },
+  "durable_objects": { "bindings": [{ "name": "VAULT", "class_name": "CredentialVault" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CredentialVault"] }]
+}

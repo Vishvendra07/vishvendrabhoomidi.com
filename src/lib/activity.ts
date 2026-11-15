@@ -6,7 +6,7 @@ export function validDate(value: string) {
   return /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 }
 export type DailyActivity = { date: string; count: number | null; providers: string[]; partial?: boolean };
-export type ActivityMetadata = { source: SourceId; label: string; unit: ActivityUnit; timezone: string; verified: boolean; updatedAt: string | null; coverage: { start: string; end: string; complete: boolean } | null };
+export type ActivityMetadata = { source: SourceId; label: string; unit: ActivityUnit; timezone: string; verified: boolean; updatedAt: string | null; coverage: { start: string; end: string; complete: boolean } | null; accountSummary?: { lifetimeTokens: number | null; currentStreakDays: number | null; longestStreakDays: number; activeDays: number; streakAsOf: string } };
 export type ActivityDataset = { metadata: ActivityMetadata; days: DailyActivity[] };
 export type ActivitySummary = { total: number | null; activeDays: number; observedDays: number; currentStreak: number | null; longestStreak: number | null; peak: DailyActivity | null };
 export type ActivityRange = { start: string; end: string; source: SourceId };
@@ -26,6 +26,16 @@ export function dateRange(start: string, end: string) {
   return days;
 }
 export function safeSum(a: number, b: number) { const total = a + b; if (!Number.isSafeInteger(total)) throw new Error("Token sum exceeds safe integer precision"); return total; }
+/** Positive evidence from either account proves an active date, even with partial token coverage. */
+export function observedStreaks(days: DailyActivity[], today: string) {
+  const active = [...new Set(days.filter(day => day.count !== null && day.count > 0 && day.date <= today).map(day => day.date))].sort();
+  let run = 0, longestStreakDays = 0;
+  for (let i = 0; i < active.length; i++) { run = i && addDays(active[i - 1], 1) === active[i] ? run + 1 : 1; longestStreakDays = Math.max(longestStreakDays, run); }
+  const last = active.at(-1);
+  const lastReported = [...days].filter(day => day.count !== null).sort((a,b) => a.date.localeCompare(b.date)).at(-1);
+  const currentStreakDays = last === today || last === addDays(today, -1) ? run : lastReported && lastReported.date >= addDays(today, -1) ? 0 : null;
+  return { currentStreakDays, longestStreakDays, activeDays: active.length, streakAsOf: today };
+}
 export function emptyActivity(): ActivityDataset { return { metadata: { source: "manual-import", label: "Data not connected", unit: "tokens", timezone: "America/Detroit", verified: false, updatedAt: null, coverage: null }, days: [] }; }
 export function selectRange(data: ActivityDataset, range: ActivityRange): ActivityDataset {
   const dates = dateRange(range.start, range.end);

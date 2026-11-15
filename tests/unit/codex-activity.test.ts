@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { combineCodexSnapshots } from "../../src/lib/codex-activity";
+import { observedStreaks } from "../../src/lib/activity";
 const now = new Date("2026-11-15T12:00:00Z");
 function snapshot(key = "a", buckets: { startDate: string; tokens: number }[] | null = [{ startDate: "2026-11-12", tokens: 10 }, { startDate: "2026-11-14", tokens: 0 }]) {
   return { version: 1, accountKey: key.repeat(64), fetchedAt: now.toISOString(), usage: {
@@ -13,9 +14,25 @@ describe("two-account Codex activity", () => {
     expect(result.metadata.coverage?.complete).toBe(false);
     expect(combineCodexSnapshots([snapshot(), snapshot("b")], now)).toEqual(result);
   });
-  it("never publishes account identities or provider lifetime summaries", () => {
+  it("never publishes account identities or individual provider summaries", () => {
     const text = JSON.stringify(combineCodexSnapshots([snapshot(), snapshot("b")], now));
-    expect(text).not.toContain("accountKey"); expect(text).not.toContain("lifetimeTokens"); expect(text).not.toContain("a".repeat(64));
+    expect(text).not.toContain("accountKey"); expect(text).not.toContain("longestRunningTurnSec"); expect(text).not.toContain("a".repeat(64));
+  });
+  it("publishes lifetime totals independently of returned daily coverage", () => {
+    const a = snapshot(), b = snapshot("b");
+    const input = [a,b].map((s,i) => ({...s,usage:{...s.usage,summary:{...s.usage.summary,lifetimeTokens:100 + i * 100}}}));
+    expect(combineCodexSnapshots(input,now).metadata.accountSummary?.lifetimeTokens).toBe(300);
+    expect(combineCodexSnapshots([a,b],now).metadata.accountSummary?.lifetimeTokens).toBeNull();
+  });
+  it("uses positive evidence across partial accounts and grants today a grace period", () => {
+    const days = [12,13,14].map(date => ({ date:`2026-11-${date}`,count:1,providers:[],partial:true }));
+    expect(observedStreaks(days,"2026-11-15")).toMatchObject({currentStreakDays:3,longestStreakDays:3});
+    expect(observedStreaks([...days,{date:"2026-11-15",count:0,providers:[],partial:false}],"2026-11-15").currentStreakDays).toBe(3);
+    expect(observedStreaks(days,"2026-11-17").currentStreakDays).toBeNull();
+  });
+  it("breaks observed streaks at gaps without inventing zero token days", () => {
+    const days = [10,11,13,14].map(date => ({date:`2026-11-${date}`,count:1,providers:[]}));
+    expect(observedStreaks(days,"2026-11-15")).toMatchObject({currentStreakDays:2,longestStreakDays:2,activeDays:4});
   });
   it("rejects signing into the same account twice", () => {
     expect(() => combineCodexSnapshots([snapshot(), snapshot()], now)).toThrow(/same account/);
