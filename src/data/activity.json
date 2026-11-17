@@ -7,12 +7,12 @@
     "verified": true,
     "accountSummary": {
       "lifetimeTokens": 204226148181,
-      "currentStreakDays": 113,
+      "currentStreakDays": null,
       "longestStreakDays": 113,
       "activeDays": 361,
-      "streakAsOf": "2026-11-16"
+      "streakAsOf": "2026-11-17"
     },
-    "updatedAt": "2026-11-16T21:58:03.419Z",
+    "updatedAt": "2026-11-17T07:50:36.795Z",
     "coverage": {
       "start": "2025-09-05",
       "end": "2026-11-15",
