@@ -6,13 +6,13 @@
     "timezone": "UTC",
     "verified": true,
     "accountSummary": {
-      "lifetimeTokens": 212233255728,
+      "lifetimeTokens": 212451396726,
       "currentStreakDays": 118,
       "longestStreakDays": 118,
       "activeDays": 366,
       "streakAsOf": "2026-11-21"
     },
-    "updatedAt": "2026-11-21T06:59:50.203Z",
+    "updatedAt": "2026-11-21T19:10:39.323Z",
     "coverage": {
       "start": "2025-09-05",
       "end": "2026-11-20",
@@ -3399,7 +3399,7 @@
     },
     {
       "date": "2026-11-20",
-      "count": 300343991,
+      "count": 518484989,
       "providers": [
         "Codex · 1 of 2 accounts reported (partial)"
       ],
