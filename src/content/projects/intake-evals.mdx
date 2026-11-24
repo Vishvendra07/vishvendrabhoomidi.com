@@ -1,0 +1,26 @@
+---
+slug: intake-evals
+title: Intake Evals
+subtitle: Give every extracted value an evidence trail.
+description: A fixture-based evaluation harness for structured intake extraction, supporting evidence and correction handling.
+draft: false
+tags: [Applied AI, Evaluation]
+role: Applied AI Engineer
+status: Runnable portfolio demo
+category: Applied AI
+context: Synthetic student intake
+order: 6
+visibility: public
+repository: https://github.com/Vishvendra07/intake-evals
+technologies: [Python, JSONL, Regression evaluation]
+---
+
+## The extraction decision
+
+An applicant can change a requested program, withdraw a follow-up request, or leave the start term uncertain. I built an offline comparison that surfaces the unsupported values produced by a first-mention heuristic and checks which applicant turn supports each selected value.
+
+## Evidence
+
+On 60 authored regression cases, the baseline matched 24 and the evidence-aware comparator matched 60. The candidate emitted zero wrong or unsupported values on this fixture set. The report retains per-field scoring, case categories and failure examples. These are deterministic regression results on synthetic templates.
+
+[Source and evaluation results](https://github.com/Vishvendra07/intake-evals) · [All demos](/work/open-source-engineering)

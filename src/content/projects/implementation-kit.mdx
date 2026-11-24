@@ -1,0 +1,26 @@
+---
+slug: implementation-kit
+title: Implementation Kit
+subtitle: Make the second CRM deployment repeatable.
+description: A customer deployment sandbox with two adapter inputs, mapping revisions, dry runs, repeat-safe apply and rollback.
+draft: false
+tags: [Forward deployed, Integrations]
+role: Forward Deployed Engineer
+status: Runnable portfolio demo
+category: Customer deployment
+context: Simulated CRM implementation
+order: 8
+visibility: public
+repository: https://github.com/Vishvendra07/implementation-kit
+technologies: [Python, SQLite, HTTP, CSV]
+---
+
+## The rollout
+
+North provides a CSV export. Harbor uses a mock CRM endpoint. Each customer keeps its own field and stage mapping revision. The same CLI shows which records would be accepted, which need operator review and what a repeat will do before anything changes.
+
+## Evidence
+
+The demo imports both tenants with overlapping external IDs, writes zero additional records when repeating North's import, and protects a later operator edit during rollback. The repo includes both configurations, fixture data, a mock server and an operator handoff. It complements the separate [Kaarya case study](/work/kaarya-ai) for professional customer work.
+
+[Source, demo and handoff](https://github.com/Vishvendra07/implementation-kit) · [All demos](/work/open-source-engineering)

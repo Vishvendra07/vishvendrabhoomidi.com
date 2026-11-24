@@ -1,0 +1,26 @@
+---
+slug: event-relay
+title: Event Relay
+subtitle: One downstream receipt through delivery retries.
+description: A PostgreSQL transactional outbox with concurrent claims, expiring leases and idempotent receiver storage.
+draft: false
+tags: [Backend, Reliability]
+role: Backend Software Engineer
+status: Runnable portfolio demo
+category: Backend systems
+context: Synthetic order events
+order: 7
+visibility: public
+repository: https://github.com/Vishvendra07/event-relay
+technologies: [Python, FastAPI, PostgreSQL, Psycopg, Docker Compose]
+---
+
+## The acknowledgment fails
+
+The service commits an order and its outbox together. A receiver records a synthetic order event, then returns a failure to simulate an unconfirmed delivery. The worker retries the same event ID. The receiver acknowledges the existing receipt and the worker settles the delivery only while its lease is current.
+
+## Evidence
+
+Seven PostgreSQL tests cover atomic enqueue, duplicate submissions, worker claims, stale leases, expiry and duplicate receipt handling. The full Compose demo exercises normal delivery, retry after commit and exhaustion. The measured benchmark belongs to the local workload and is published with raw results.
+
+[Source and verification](https://github.com/Vishvendra07/event-relay) · [Worker comparison](https://github.com/Vishvendra07/event-relay-performance) · [All demos](/work/open-source-engineering)
