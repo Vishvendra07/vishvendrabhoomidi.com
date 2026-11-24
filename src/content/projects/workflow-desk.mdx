@@ -1,0 +1,26 @@
+---
+slug: workflow-desk
+title: Workflow Desk
+subtitle: Keep the draft when the record changes.
+description: A React and FastAPI case queue with persisted revisions, conflict recovery, and browser tests across separate operator sessions.
+draft: false
+tags: [Full-stack, Product engineering]
+role: Full-Stack Software Engineer
+status: Runnable portfolio demo
+category: Product engineering
+context: Simulated case operations
+order: 5
+visibility: public
+repository: https://github.com/Vishvendra07/workflow-desk
+technologies: [React, TypeScript, Vite, FastAPI, SQLite, Playwright]
+---
+
+## An edit collides
+
+Two operators open the same case. When one saves, the second still has an unsaved draft against the old revision. The API returns `409` with the current record. The editor shows the server notes, status and owner beside the preserved draft. The second operator can keep the draft for an explicit retry or load the server version.
+
+## Evidence
+
+The API test checks that the rejected write adds zero audit revisions, then verifies one revision for the successful retry. Chrome reproduced the workflow manually. Playwright exercised separate contexts, keyboard activation, persistence after reload, and a compact mobile queue. The project uses seeded users and a local SQLite database.
+
+[Source and verification](https://github.com/Vishvendra07/workflow-desk) · [All demos](/work/open-source-engineering)
