@@ -1,26 +1,46 @@
 ---
-slug: intake-evals
-title: Intake Evals
-subtitle: Give every extracted value an evidence trail.
-description: A fixture-based evaluation harness for structured intake extraction, supporting evidence and correction handling.
+slug: "intake-evals"
+title: "Intake Evals"
+subtitle: "Find the evidence behind the field."
+description: "A 60-case regression harness for intake extraction, corrections, uncertainty, withdrawn requests, and supporting evidence."
 draft: false
-tags: [Applied AI, Evaluation]
-role: Applied AI Engineer
-status: Runnable portfolio demo
-category: Applied AI
-context: Synthetic student intake
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
 order: 6
-visibility: public
-repository: https://github.com/Vishvendra07/intake-evals
-technologies: [Python, JSONL, Regression evaluation]
+repository: "https://github.com/Vishvendra07/intake-evals"
+family: "Applied AI"
+art: "evaluation"
+proof: "24 → 60 exact matches on authored cases"
+evidence: "https://github.com/Vishvendra07/intake-evals/blob/main/evidence/comparative-report.json"
+featured: true
+collection: "engineering"
+technologies: ["Python", "JSONL", "Regression evaluation"]
+tags: ["Applied AI", "Engineering demo"]
 ---
 
-## The extraction decision
+## The problem
 
-An applicant can change a requested program, withdraw a follow-up request, or leave the start term uncertain. I built an offline comparison that surfaces the unsupported values produced by a first-mention heuristic and checks which applicant turn supports each selected value.
+A 60-case regression harness for intake extraction, corrections, uncertainty, withdrawn requests, and supporting evidence.
 
-## Evidence
+## The engineering decision
 
-On 60 authored regression cases, the baseline matched 24 and the evidence-aware comparator matched 60. The candidate emitted zero wrong or unsupported values on this fixture set. The report retains per-field scoring, case categories and failure examples. These are deterministic regression results on synthetic templates.
+Score extracted values and evidence separately. Expose wrong, missing, and unsupported fields so a corrected answer cannot hide an unsupported citation.
 
-[Source and evaluation results](https://github.com/Vishvendra07/intake-evals) · [All demos](/work/open-source-engineering)
+## What you can verify
+
+Across 60 authored fixtures, exact matches rise from 24 to 60 between the first-mention baseline and the evidence-aware policy. The report retains field scores and individual failures.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/intake-evals/blob/main/evidence/comparative-report.json) · [Read the source and run locally](https://github.com/Vishvendra07/intake-evals)
+
+## Scope and tradeoffs
+
+Both extractors are deterministic. These are authored regression cases, not a held-out evaluation of a language model or a general accuracy claim.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

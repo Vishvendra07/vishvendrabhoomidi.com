@@ -1,26 +1,46 @@
 ---
-slug: event-relay
-title: Event Relay
-subtitle: One downstream receipt through delivery retries.
-description: A PostgreSQL transactional outbox with concurrent claims, expiring leases and idempotent receiver storage.
+slug: "event-relay"
+title: "Event Relay"
+subtitle: "A failed acknowledgment. One receipt."
+description: "A PostgreSQL outbox that retries delivery, coordinates worker leases, and keeps the receiver’s persisted effect idempotent."
 draft: false
-tags: [Backend, Reliability]
-role: Backend Software Engineer
-status: Runnable portfolio demo
-category: Backend systems
-context: Synthetic order events
-order: 7
-visibility: public
-repository: https://github.com/Vishvendra07/event-relay
-technologies: [Python, FastAPI, PostgreSQL, Psycopg, Docker Compose]
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 1
+repository: "https://github.com/Vishvendra07/event-relay"
+family: "Backend"
+art: "relay"
+proof: "Retry after commit; one receipt"
+evidence: "https://github.com/Vishvendra07/event-relay/blob/main/evidence/demo.json"
+featured: true
+collection: "engineering"
+technologies: ["Python", "FastAPI", "PostgreSQL", "Psycopg", "Docker"]
+tags: ["Backend", "Engineering demo"]
 ---
 
-## The acknowledgment fails
+## The problem
 
-The service commits an order and its outbox together. A receiver records a synthetic order event, then returns a failure to simulate an unconfirmed delivery. The worker retries the same event ID. The receiver acknowledges the existing receipt and the worker settles the delivery only while its lease is current.
+A PostgreSQL outbox that retries delivery, coordinates worker leases, and keeps the receiver’s persisted effect idempotent.
 
-## Evidence
+## The engineering decision
 
-Seven PostgreSQL tests cover atomic enqueue, duplicate submissions, worker claims, stale leases, expiry and duplicate receipt handling. The full Compose demo exercises normal delivery, retry after commit and exhaustion. The measured benchmark belongs to the local workload and is published with raw results.
+Commit the order and outbox in one transaction. Claim work with SKIP LOCKED, perform HTTP outside the lock, and reject results from an expired attempt.
 
-[Source and verification](https://github.com/Vishvendra07/event-relay) · [Worker comparison](https://github.com/Vishvendra07/event-relay-performance) · [All demos](/work/open-source-engineering)
+## What you can verify
+
+The local HTTP demo covers normal delivery, an acknowledgment failure after receipt commit, and exhaustion before a receipt exists. Seven PostgreSQL tests exercise concurrency and recovery.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/event-relay/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/event-relay)
+
+## Scope and tradeoffs
+
+Synthetic orders, a local Docker host, and a fixed receiver. At-least-once delivery does not establish exactly-once behavior across arbitrary integrations.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

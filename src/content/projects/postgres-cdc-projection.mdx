@@ -1,0 +1,46 @@
+---
+slug: "postgres-cdc-projection"
+title: "Postgres CDC Projection"
+subtitle: "Restart without rebuilding the truth."
+description: "A PostgreSQL logical-stream consumer that recovers after a sink commit without acknowledgment and reconciles the resulting view."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 4
+repository: "https://github.com/Vishvendra07/postgres-cdc-projection"
+family: "Backend"
+art: "checkpoint"
+proof: "Restart applies zero duplicates"
+evidence: "https://github.com/Vishvendra07/postgres-cdc-projection/blob/main/evidence/demo.json"
+featured: true
+collection: "engineering"
+technologies: ["Python", "PostgreSQL", "Logical decoding", "Docker"]
+tags: ["Backend", "Engineering demo"]
+---
+
+## The problem
+
+A PostgreSQL logical-stream consumer that recovers after a sink commit without acknowledgment and reconciles the resulting view.
+
+## The engineering decision
+
+Commit the projection and watermark together. Acknowledge the source only after that transaction so a restarted consumer can skip already committed history.
+
+## What you can verify
+
+The PostgreSQL 17 trace applies two changes, restarts without acknowledgment, applies zero duplicates, and then processes the next transaction. The final projection matches the source.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/postgres-cdc-projection/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/postgres-cdc-projection)
+
+## Scope and tradeoffs
+
+A dedicated development database, test_decoding, and a small integer schema. The evidence covers insert, update, delete, and simulated consumer restart.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

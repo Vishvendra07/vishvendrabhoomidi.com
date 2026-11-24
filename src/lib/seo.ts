@@ -6,7 +6,7 @@ export const socialImage={url:'/media/social/vishvendra-meta.jpg',width:1200,hei
 export const seoPages:Record<string,{title:string;description:string}>={
  '/':{title:'Vishvendra Reddy Bhoomidi | Founder & AI Engineer',description:'Vishvendra Reddy Bhoomidi, founder of Kaarya AI. Explore AI engineering, Python backends, full-stack products, projects, and engineering notes.'},
  '/about':{title:'About',description:'Meet Vishvendra Reddy Bhoomidi: Kaarya AI founder, AI engineer, and Michigan graduate. Explore his experience, education, and approach to building useful systems.'},
- '/work':{title:'Engineering Projects & Kaarya AI',description:'Explore Vishvendra Bhoomidi’s work: Kaarya AI, NutriLensAI, and EatFit. Read the engineering decisions, responsibilities, and evidence behind each project.'},
+ '/work':{title:'Engineering Projects & Kaarya AI',description:'Explore Kaarya AI and 20 engineering demos by Vishvendra Bhoomidi: backend reliability, React products, AI evaluation, MCP tools, and customer integrations. Source, decisions, and evidence.'},
  '/writing':{title:'Writing on AI & Engineering',description:'Vishvendra Bhoomidi’s notebook on AI systems, software engineering, and building useful products. Published essays will appear here after editorial review.'},
  '/lab':{title:'Interactive Engineering Lab',description:'Explore interactive models of AI execution and voice latency. Follow message-to-action handoffs and experiment with sequential and parallel work.'},
  '/now':{title:'Now',description:'A dated update from Vishvendra Bhoomidi on building this personal website, connecting engineering work, and making space for thoughtful writing.'},

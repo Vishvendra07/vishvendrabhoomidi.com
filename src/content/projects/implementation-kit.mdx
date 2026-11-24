@@ -1,26 +1,46 @@
 ---
-slug: implementation-kit
-title: Implementation Kit
-subtitle: Make the second CRM deployment repeatable.
-description: A customer deployment sandbox with two adapter inputs, mapping revisions, dry runs, repeat-safe apply and rollback.
+slug: "implementation-kit"
+title: "Implementation Kit"
+subtitle: "Different customers. One implementation path."
+description: "A shared import tool for two fictional CRM deployments, with versioned mappings, dry runs, repeat-safe apply, and partial rollback."
 draft: false
-tags: [Forward deployed, Integrations]
-role: Forward Deployed Engineer
-status: Runnable portfolio demo
-category: Customer deployment
-context: Simulated CRM implementation
-order: 8
-visibility: public
-repository: https://github.com/Vishvendra07/implementation-kit
-technologies: [Python, SQLite, HTTP, CSV]
+role: "Individual project"
+status: "Runnable demo"
+category: "Forward deployed"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 3
+repository: "https://github.com/Vishvendra07/implementation-kit"
+family: "Forward deployed"
+art: "mapping"
+proof: "Rerun writes zero; rollback preserves edits"
+evidence: "https://github.com/Vishvendra07/implementation-kit/blob/main/evidence/demo.json"
+featured: true
+collection: "engineering"
+technologies: ["Python", "SQLite", "CSV", "Versioned configuration"]
+tags: ["Forward deployed", "Engineering demo"]
 ---
 
-## The rollout
+## The problem
 
-North provides a CSV export. Harbor uses a mock CRM endpoint. Each customer keeps its own field and stage mapping revision. The same CLI shows which records would be accepted, which need operator review and what a repeat will do before anything changes.
+A shared import tool for two fictional CRM deployments, with versioned mappings, dry runs, repeat-safe apply, and partial rollback.
 
-## Evidence
+## The engineering decision
 
-The demo imports both tenants with overlapping external IDs, writes zero additional records when repeating North's import, and protects a later operator edit during rollback. The repo includes both configurations, fixture data, a mock server and an operator handoff. It complements the separate [Kaarya case study](/work/kaarya-ai) for professional customer work.
+Put repeatable customer differences in configuration. Bind a run to its tenant and mapping version, and roll back only the records that run still owns.
 
-[Source, demo and handoff](https://github.com/Vishvendra07/implementation-kit) · [All demos](/work/open-source-engineering)
+## What you can verify
+
+The North import writes two records, then writes zero on replay. Rollback removes one record and preserves the record changed by an operator; Harbor’s records remain intact.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/implementation-kit/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/implementation-kit)
+
+## Scope and tradeoffs
+
+Both deployments and the CRM are simulations backed by a local sandbox. No customer CRM is changed.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

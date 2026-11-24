@@ -1,0 +1,46 @@
+---
+slug: "eatfit-order-sandbox"
+title: "EatFit Order Sandbox"
+subtitle: "Replay the order. Keep the stock."
+description: "A checkout sandbox that stores a receipt and inventory changes atomically, then safely replays an order key."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Full-stack"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 26
+repository: "https://github.com/Vishvendra07/eatfit-order-sandbox"
+family: "Full-stack"
+art: "receipt"
+proof: "Replayed key returns the same receipt"
+evidence: "https://github.com/Vishvendra07/eatfit-order-sandbox/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "SQLite", "Transactions"]
+tags: ["Full-stack", "Engineering demo"]
+---
+
+## The problem
+
+A checkout sandbox that stores a receipt and inventory changes atomically, then safely replays an order key.
+
+## The engineering decision
+
+Snapshot line prices and normalize cart order before comparing payloads. Keep stock checks and the persisted receipt inside one transaction.
+
+## What you can verify
+
+The demo replays an order key, returns the same receipt, and leaves inventory unchanged by the replay. Tests also cover a rejected cart.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/eatfit-order-sandbox/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/eatfit-order-sandbox)
+
+## Scope and tradeoffs
+
+A fictional catalog and local SQLite. This companion to the original EatFit team project does not process payments.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

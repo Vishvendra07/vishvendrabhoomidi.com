@@ -1,0 +1,46 @@
+---
+slug: "tenant-search-benchmark"
+title: "Tenant Search Benchmark"
+subtitle: "Scope first. Rank second."
+description: "A tenant-scoped comparison of keyword ranking and hashed feature-vector similarity, cross-checked with pgvector."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 30
+repository: "https://github.com/Vishvendra07/tenant-search-benchmark"
+family: "Applied AI"
+art: "search"
+proof: "SQL and offline exact rankings agree"
+evidence: "https://github.com/Vishvendra07/tenant-search-benchmark/blob/main/evidence/pgvector.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "PostgreSQL", "pgvector", "Retrieval evaluation"]
+tags: ["Applied AI", "Engineering demo"]
+---
+
+## The problem
+
+A tenant-scoped comparison of keyword ranking and hashed feature-vector similarity, cross-checked with pgvector.
+
+## The engineering decision
+
+Apply the tenant boundary before scoring. Compare original query terms and declared synonym expansion over the same labeled documents and top-k.
+
+## What you can verify
+
+The PostgreSQL query reproduces the offline exact vector ranking on the fixtures. Saved reports keep keyword, vector, and SQL results side by side.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/tenant-search-benchmark/blob/main/evidence/pgvector.json) · [Read the source and run locally](https://github.com/Vishvendra07/tenant-search-benchmark)
+
+## Scope and tradeoffs
+
+Eight authored queries, deterministic features, and a smoke-size corpus. This is not a learned production embedding system.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

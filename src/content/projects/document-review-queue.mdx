@@ -1,0 +1,46 @@
+---
+slug: "document-review-queue"
+title: "Document Review Queue"
+subtitle: "Confidence needs a second look."
+description: "A review queue that combines evidence flags and validation with a versioned human decision."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Full-stack"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 35
+repository: "https://github.com/Vishvendra07/document-review-queue"
+family: "Full-stack"
+art: "review"
+proof: "Stale second decision rejected"
+evidence: "https://github.com/Vishvendra07/document-review-queue/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "SQLite", "Versioned review", "Audit records"]
+tags: ["Full-stack", "Engineering demo"]
+---
+
+## The problem
+
+A review queue that combines evidence flags and validation with a versioned human decision.
+
+## The engineering decision
+
+Confidence alone cannot clear an extraction. Record the evidence, validation state, reviewer, and revision with the final decision.
+
+## What you can verify
+
+The saved trace routes an authored extraction to review, records a decision, and rejects a stale second decision while retaining audit entries.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/document-review-queue/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/document-review-queue)
+
+## Scope and tradeoffs
+
+Synthetic OCR observations and a local workflow. The demo does not make real eligibility or payment decisions.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

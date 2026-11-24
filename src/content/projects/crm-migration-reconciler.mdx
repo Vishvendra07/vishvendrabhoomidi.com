@@ -1,0 +1,46 @@
+---
+slug: "crm-migration-reconciler"
+title: "CRM Migration Reconciler"
+subtitle: "When identities disagree, ask for review."
+description: "A migration planner that normalizes contact records and surfaces conflicting email and phone matches."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Forward deployed"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 36
+repository: "https://github.com/Vishvendra07/crm-migration-reconciler"
+family: "Forward deployed"
+art: "reconcile"
+proof: "Ambiguous identity signals stay visible"
+evidence: "https://github.com/Vishvendra07/crm-migration-reconciler/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "CSV", "Identity matching", "Reconciliation"]
+tags: ["Forward deployed", "Engineering demo"]
+---
+
+## The problem
+
+A migration planner that normalizes contact records and surfaces conflicting email and phone matches.
+
+## The engineering decision
+
+Treat conflicting identity signals and duplicate source IDs as review cases. Report planned counts and reasons before any merge can occur.
+
+## What you can verify
+
+The saved reconciliation lists input candidates, ambiguous rows, staged creates, and a rerun that creates no extra records.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/crm-migration-reconciler/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/crm-migration-reconciler)
+
+## Scope and tradeoffs
+
+Authored sandbox contacts and US phone normalization. The planner does not write to an actual CRM.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

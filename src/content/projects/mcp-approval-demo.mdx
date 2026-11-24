@@ -1,0 +1,46 @@
+---
+slug: "mcp-approval-demo"
+title: "MCP Approval Demo"
+subtitle: "A proposal is not permission."
+description: "A stdio MCP server that separates a proposed catalog change from the operator command that applies it."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 5
+repository: "https://github.com/Vishvendra07/mcp-approval-demo"
+family: "Applied AI"
+art: "approval"
+proof: "Proposal stays read-only until approval"
+evidence: "https://github.com/Vishvendra07/mcp-approval-demo/blob/main/evidence/demo.json"
+featured: true
+collection: "engineering"
+technologies: ["Python", "MCP", "SQLite", "SHA-256"]
+tags: ["Applied AI", "Engineering demo"]
+---
+
+## The problem
+
+A stdio MCP server that separates a proposed catalog change from the operator command that applies it.
+
+## The engineering decision
+
+Bind the approval to the exact payload digest and expected record revision. Keep proposal and approval entry points separate and persist a receipt.
+
+## What you can verify
+
+The recorded run proposes a quantity change without changing the catalog, then applies the reviewed proposal: quantity moves from 5 to 8 and revision from 1 to 2.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/mcp-approval-demo/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/mcp-approval-demo)
+
+## Scope and tradeoffs
+
+Synthetic inventory and local SQLite. The file needs OS access controls in a shared environment; the demo is not a hosted authorization service.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

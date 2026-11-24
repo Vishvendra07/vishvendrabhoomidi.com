@@ -4,11 +4,12 @@ import { latencyBudget } from "../../src/lib/latency";
 import { checkRelease } from "../../scripts/release-check";
 describe("content and release boundaries",()=>{
   it("does not publish the unapproved essay",()=>{expect(getArticles()).toHaveLength(0);});
-  it("leads with Kaarya and the engineering demos index",()=>{
-    expect(getProjects().map(project=>project.slug)).toEqual([
-      "kaarya-ai","open-source-engineering","nutrilens-ai","eatfit","email-classifier",
-      "bayesian-inference","workflow-desk","intake-evals","event-relay","implementation-kit",
-    ]);
+  it("publishes 20 evidence-linked demos with six curated starting points",()=>{
+    const projects=getProjects(),demos=projects.filter(p=>p.collection==='engineering');
+    expect(projects[0].slug).toBe('kaarya-ai');
+    expect(demos).toHaveLength(20);
+    expect(demos.filter(p=>p.featured).map(p=>p.slug)).toEqual(['event-relay','workflow-desk','implementation-kit','postgres-cdc-projection','mcp-approval-demo','intake-evals']);
+    for(const p of demos){expect(p.evidence).toMatch(/^https:\/\/github.com\/Vishvendra07\//);expect(p.repository).toBe(`https://github.com/Vishvendra07/${p.slug}`);expect(p.body).toContain('## Scope and tradeoffs');}
   });
   it("requires a publication date",()=>expect(()=>articleSchema.parse({slug:"a",title:"A",description:"A",draft:false})).toThrow());
   it("escapes feed content",()=>expect(xmlEscape('<a & "b">')).toBe("&lt;a &amp; &quot;b&quot;&gt;"));

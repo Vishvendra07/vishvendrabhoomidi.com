@@ -1,26 +1,46 @@
 ---
-slug: workflow-desk
-title: Workflow Desk
-subtitle: Keep the draft when the record changes.
-description: A React and FastAPI case queue with persisted revisions, conflict recovery, and browser tests across separate operator sessions.
+slug: "workflow-desk"
+title: "Workflow Desk"
+subtitle: "Keep the draft. Resolve the conflict."
+description: "A React case workspace that preserves an operator’s draft when another session saves a newer revision."
 draft: false
-tags: [Full-stack, Product engineering]
-role: Full-Stack Software Engineer
-status: Runnable portfolio demo
-category: Product engineering
-context: Simulated case operations
-order: 5
-visibility: public
-repository: https://github.com/Vishvendra07/workflow-desk
-technologies: [React, TypeScript, Vite, FastAPI, SQLite, Playwright]
+role: "Individual project"
+status: "Runnable demo"
+category: "Full-stack"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 2
+repository: "https://github.com/Vishvendra07/workflow-desk"
+family: "Full-stack"
+art: "revisions"
+proof: "Two sessions; one recoverable conflict"
+evidence: "https://github.com/Vishvendra07/workflow-desk/blob/main/evidence/conflict-desktop.png"
+featured: true
+collection: "engineering"
+technologies: ["React", "TypeScript", "FastAPI", "SQLite", "Playwright"]
+tags: ["Full-stack", "Engineering demo"]
 ---
 
-## An edit collides
+## The problem
 
-Two operators open the same case. When one saves, the second still has an unsaved draft against the old revision. The API returns `409` with the current record. The editor shows the server notes, status and owner beside the preserved draft. The second operator can keep the draft for an explicit retry or load the server version.
+A React case workspace that preserves an operator’s draft when another session saves a newer revision.
 
-## Evidence
+## The engineering decision
 
-The API test checks that the rejected write adds zero audit revisions, then verifies one revision for the successful retry. Chrome reproduced the workflow manually. Playwright exercised separate contexts, keyboard activation, persistence after reload, and a compact mobile queue. The project uses seeded users and a local SQLite database.
+Treat the persisted revision as a write precondition. Keep the local draft separate from the server record until the operator chooses how to reconcile the conflict.
 
-[Source and verification](https://github.com/Vishvendra07/workflow-desk) · [All demos](/work/open-source-engineering)
+## What you can verify
+
+The saved browser evidence shows two independent operator sessions editing one case, a stale save, draft recovery, and a successful retry. API and browser tests cover the path.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/workflow-desk/blob/main/evidence/conflict-desktop.png) · [Read the source and run locally](https://github.com/Vishvendra07/workflow-desk)
+
+## Scope and tradeoffs
+
+SQLite makes the demo portable. The fictional operator selector represents demo actors and is not authentication.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

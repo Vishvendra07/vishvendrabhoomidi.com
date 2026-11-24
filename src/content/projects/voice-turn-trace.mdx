@@ -1,0 +1,46 @@
+---
+slug: "voice-turn-trace"
+title: "Voice Turn Trace"
+subtitle: "See where the first audio waits."
+description: "A timeline of overlapping transcription, inference, synthesis, and playback, with interrupted turns measured separately."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 27
+repository: "https://github.com/Vishvendra07/voice-turn-trace"
+family: "Applied AI"
+art: "timeline"
+proof: "Overlapping stages; separate interruptions"
+evidence: "https://github.com/Vishvendra07/voice-turn-trace/blob/main/evidence/demo.html"
+featured: false
+collection: "engineering"
+technologies: ["Python", "HTML", "Trace analysis"]
+tags: ["Applied AI", "Engineering demo"]
+---
+
+## The problem
+
+A timeline of overlapping transcription, inference, synthesis, and playback, with interrupted turns measured separately.
+
+## The engineering decision
+
+Use wall-clock boundaries for first-audio latency. Stage durations explain the critical path, while interrupted turns stay outside completed-turn percentiles.
+
+## What you can verify
+
+The HTML trace and tests expose stage overlap and a separate interrupted turn. Each timing remains inspectable in the authored trace.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/voice-turn-trace/blob/main/evidence/demo.html) · [Read the source and run locally](https://github.com/Vishvendra07/voice-turn-trace)
+
+## Scope and tradeoffs
+
+Synthetic timings, without microphone, model-provider, carrier, or handset measurements. This is a diagnostic model rather than a provider benchmark.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

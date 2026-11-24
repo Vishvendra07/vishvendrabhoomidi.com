@@ -8,7 +8,7 @@ export function MotionChoreography(){
  const pathname=usePathname();
  useEffect(()=>{
   const sky=document.querySelector<HTMLElement>('.signal-sky');
-  const visibility=()=>{if(sky)sky.dataset.hidden=String(document.hidden);};
+  const visibility=()=>{if(sky)sky.dataset.hidden=String(document.hidden);document.documentElement.dataset.pageHidden=String(document.hidden);};
   visibility();document.addEventListener('visibilitychange',visibility);
   const scenes=document.querySelectorAll<HTMLElement>('.brand-stage,.project-illustration,.toolkit-constellation,.lab-preview,.pipeline-canvas');
   const observer=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('motion-outside',!entry.isIntersecting);},{rootMargin:'80px'});

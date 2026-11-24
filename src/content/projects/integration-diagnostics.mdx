@@ -1,0 +1,46 @@
+---
+slug: "integration-diagnostics"
+title: "Integration Diagnostics"
+subtitle: "Make drift explainable. Keep exports scoped."
+description: "A mapping diagnostic that detects schema drift and creates an allowlisted support bundle."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Forward deployed"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 29
+repository: "https://github.com/Vishvendra07/integration-diagnostics"
+family: "Forward deployed"
+art: "diagnostics"
+proof: "Allowlisted support bundle"
+evidence: "https://github.com/Vishvendra07/integration-diagnostics/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "JSON", "ZIP", "Schema validation"]
+tags: ["Forward deployed", "Engineering demo"]
+---
+
+## The problem
+
+A mapping diagnostic that detects schema drift and creates an allowlisted support bundle.
+
+## The engineering decision
+
+Export field categories and recognized error counts. Exclude source values, URLs, and free-text failure details from the archive.
+
+## What you can verify
+
+Fixture schemas exercise missing mappings, incompatible types, and unmapped required fields. The support bundle is deterministic and locally inspectable.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/integration-diagnostics/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/integration-diagnostics)
+
+## Scope and tradeoffs
+
+Authored schemas and local files. The utility does not upload logs or claim comprehensive secret detection.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

@@ -1,0 +1,46 @@
+---
+slug: "durable-approvals"
+title: "Durable Approvals"
+subtitle: "The worker stops. The decision survives."
+description: "A Temporal reservation workflow that waits for approval, survives worker replacement, and releases work on expiry or cancellation."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 33
+repository: "https://github.com/Vishvendra07/durable-approvals"
+family: "Backend"
+art: "durable"
+proof: "Approval resumes after worker replacement"
+evidence: "https://github.com/Vishvendra07/durable-approvals/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "Temporal", "SQLite", "Async workflows"]
+tags: ["Backend", "Engineering demo"]
+---
+
+## The problem
+
+A Temporal reservation workflow that waits for approval, survives worker replacement, and releases work on expiry or cancellation.
+
+## The engineering decision
+
+Store workflow decisions in Temporal history. Deduplicate the simulated side effect with a receipt key, and distinguish business cancellation from process interruption.
+
+## What you can verify
+
+The local Temporal test-server run covers continuation after worker replacement, the approval deadline, cancellation, and the resulting receipts.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/durable-approvals/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/durable-approvals)
+
+## Scope and tradeoffs
+
+Simulated reservation activities and local test infrastructure. The run does not exercise an external reservation provider.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

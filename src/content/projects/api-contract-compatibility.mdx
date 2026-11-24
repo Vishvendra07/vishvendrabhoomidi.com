@@ -1,0 +1,46 @@
+---
+slug: "api-contract-compatibility"
+title: "API Contract Compatibility Gate"
+subtitle: "Add the field. Keep the contract."
+description: "A compatibility gate that checks two consumers against live local API revisions and catches independent breaking changes."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 39
+repository: "https://github.com/Vishvendra07/api-contract-compatibility"
+family: "Backend"
+art: "contract"
+proof: "Two contract breaks caught and repaired"
+evidence: "https://github.com/Vishvendra07/api-contract-compatibility/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "HTTP", "JSON Schema", "Consumer contracts"]
+tags: ["Backend", "Engineering demo"]
+---
+
+## The problem
+
+A compatibility gate that checks two consumers against live local API revisions and catches independent breaking changes.
+
+## The engineering decision
+
+Check response shape and invalid-request behavior. Preserve compatible fields while introducing an additive representation.
+
+## What you can verify
+
+Both original contracts pass, both reject the breaking revision, and both accept the compatibility fix. The invalid request returns HTTP 422.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/api-contract-compatibility/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/api-contract-compatibility)
+
+## Scope and tradeoffs
+
+Local HTTP handlers, authored JSON Schemas, and fixture data. Compatibility is verified for these two consumers.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

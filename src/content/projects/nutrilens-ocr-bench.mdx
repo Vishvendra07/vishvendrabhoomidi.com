@@ -1,0 +1,46 @@
+---
+slug: "nutrilens-ocr-bench"
+title: "NutriLens OCR Bench"
+subtitle: "Measure the parser, not the promise."
+description: "A real OCR run on six generated nutrition labels, comparing strict and normalized field extraction."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 25
+repository: "https://github.com/Vishvendra07/nutrilens-ocr-bench"
+family: "Applied AI"
+art: "extraction"
+proof: "Six generated labels; real OCR output"
+evidence: "https://github.com/Vishvendra07/nutrilens-ocr-bench/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "RapidOCR", "ONNX Runtime", "Image processing"]
+tags: ["Applied AI", "Engineering demo"]
+---
+
+## The problem
+
+A real OCR run on six generated nutrition labels, comparing strict and normalized field extraction.
+
+## The engineering decision
+
+Hold OCR output fixed while comparing parsers. Keep field-level counts so normalization improvements can be attributed and remaining failures inspected.
+
+## What you can verify
+
+Saved OCR output and per-field comparisons accompany six generated label images, including slightly tilted typography. A field regression gate checks the fixture results.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/nutrilens-ocr-bench/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/nutrilens-ocr-bench)
+
+## Scope and tradeoffs
+
+Generated labels form a small controlled set. Results do not estimate population accuracy or reuse the original course project’s assets.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

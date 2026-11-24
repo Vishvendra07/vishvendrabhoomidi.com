@@ -1,0 +1,46 @@
+---
+slug: "model-change-review"
+title: "Model Change Review"
+subtitle: "Inspect what changed before routing."
+description: "A comparison of trained word and character TF-IDF classifiers with paired errors, confusion matrices, and abstention thresholds."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Applied AI"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 38
+repository: "https://github.com/Vishvendra07/model-change-review"
+family: "Applied AI"
+art: "evaluation"
+proof: "Paired predictions and abstention coverage"
+evidence: "https://github.com/Vishvendra07/model-change-review/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "scikit-learn", "TF-IDF", "Classification"]
+tags: ["Applied AI", "Engineering demo"]
+---
+
+## The problem
+
+A comparison of trained word and character TF-IDF classifiers with paired errors, confusion matrices, and abstention thresholds.
+
+## The engineering decision
+
+Evaluate distinct text and show paired predictions. Make routing coverage and the cost of abstention visible alongside classification scores.
+
+## What you can verify
+
+The saved report includes 24 training examples, 21 evaluation examples, two changed stress-case predictions, and threshold-by-threshold routing coverage.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/model-change-review/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/model-change-review)
+
+## Scope and tradeoffs
+
+Small synthetic text data and uncalibrated confidence. The report recommends independent validation before routing customer tickets.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

@@ -1,0 +1,46 @@
+---
+slug: "property-data-explorer"
+title: "Property Data Explorer"
+subtitle: "One selection, across map and table."
+description: "A DuckDB-backed explorer with linked property selection and shareable filters in the URL."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Full-stack"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 34
+repository: "https://github.com/Vishvendra07/property-data-explorer"
+family: "Full-stack"
+art: "map"
+proof: "Linked selection and shareable filters"
+evidence: "https://github.com/Vishvendra07/property-data-explorer/blob/main/evidence/demo.html"
+featured: false
+collection: "engineering"
+technologies: ["Python", "DuckDB", "HTML", "JavaScript"]
+tags: ["Full-stack", "Engineering demo"]
+---
+
+## The problem
+
+A DuckDB-backed explorer with linked property selection and shareable filters in the URL.
+
+## The engineering decision
+
+Keep a stable property ID across views and make filters explicit. Retain the query plan next to the browser preview to expose how results are selected.
+
+## What you can verify
+
+The HTML report filters fictional properties, synchronizes selection across schematic map and table, and restores filter values from the URL.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/property-data-explorer/blob/main/evidence/demo.html) · [Read the source and run locally](https://github.com/Vishvendra07/property-data-explorer)
+
+## Scope and tradeoffs
+
+Authored property data and schematic coordinates. This is not a live listing feed or a geographic accuracy claim.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

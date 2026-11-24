@@ -1,0 +1,46 @@
+---
+slug: "subscription-reconciliation-lab"
+title: "Subscription Reconciliation Lab"
+subtitle: "A late event should not rewrite history."
+description: "A billing-event projection that handles out-of-order arrival and replay using a contiguous event sequence."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 37
+repository: "https://github.com/Vishvendra07/subscription-reconciliation-lab"
+family: "Backend"
+art: "sequence"
+proof: "Projection waits for the missing sequence"
+evidence: "https://github.com/Vishvendra07/subscription-reconciliation-lab/blob/main/evidence/demo.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "SQLite", "Event projections"]
+tags: ["Backend", "Engineering demo"]
+---
+
+## The problem
+
+A billing-event projection that handles out-of-order arrival and replay using a contiguous event sequence.
+
+## The engineering decision
+
+Build state only through the highest contiguous valid sequence. Enforce provider identity and sequence uniqueness to retain an auditable event history.
+
+## What you can verify
+
+The recorded lifecycle shows a later event arriving first, the missing predecessor arriving afterward, and a processed event being replayed.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/subscription-reconciliation-lab/blob/main/evidence/demo.json) · [Read the source and run locally](https://github.com/Vishvendra07/subscription-reconciliation-lab)
+
+## Scope and tradeoffs
+
+One authored lifecycle and fixed currency. No provider charges, payment processing, or production ledger handling.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).

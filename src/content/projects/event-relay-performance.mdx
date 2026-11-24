@@ -1,0 +1,46 @@
+---
+slug: "event-relay-performance"
+title: "Event Relay Performance"
+subtitle: "Same workload. Different worker counts."
+description: "A reproducible local comparison of Event Relay with one and three workers under the same acknowledgment-failure workload."
+draft: false
+role: "Individual project"
+status: "Runnable demo"
+category: "Backend"
+context: "Independent engineering demo"
+period: "November 2026"
+order: 28
+repository: "https://github.com/Vishvendra07/event-relay-performance"
+family: "Backend"
+art: "workers"
+proof: "120 events delivered across two local runs"
+evidence: "https://github.com/Vishvendra07/event-relay-performance/blob/main/evidence/summary.json"
+featured: false
+collection: "engineering"
+technologies: ["Python", "PostgreSQL", "Docker", "Concurrent HTTP"]
+tags: ["Backend", "Engineering demo"]
+---
+
+## The problem
+
+A reproducible local comparison of Event Relay with one and three workers under the same acknowledgment-failure workload.
+
+## The engineering decision
+
+Keep event count, polling, concurrency, and failure pattern fixed. Retain every observation rather than extrapolating from a headline throughput number.
+
+## What you can verify
+
+Two 60-event runs delivered all 120 synthetic events and retained 120 receiver receipts. A failed acknowledgment is injected on every sixth event.
+
+[Inspect the recorded evidence](https://github.com/Vishvendra07/event-relay-performance/blob/main/evidence/summary.json) · [Read the source and run locally](https://github.com/Vishvendra07/event-relay-performance)
+
+## Scope and tradeoffs
+
+Local Docker and client polling influence the results. These measurements do not project hosted capacity or production throughput.
+
+The repository includes setup instructions, automated tests, and a GitHub Actions workflow. Recorded local evidence and current hosted CI are separate signals; the repository shows the latest run status.
+
+## Explore related work
+
+[Browse the engineering collection](/work#collection) or read the [Kaarya AI case study](/work/kaarya-ai).
